@@ -1,0 +1,95 @@
+*{margin: 0; padding: 0;}
+ 
+/* 화면에 너무 붙어 있어서...  */
+body{
+    padding: 30px;
+    background-color: #ffffff;
+}
+ 
+/* header 영역  */
+header{ padding: 5px;}
+
+header a{text-decoration: none; color: #333333;}
+ 
+/* nav 영역 */
+nav{margin-top: 10px; margin-bottom: 20px; top: 0; left: 0;}
+ 
+nav ul{
+    list-style: none;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    text-align: center;
+    background-color: white;
+}
+ 
+nav ul li{
+    display: inline;
+    letter-spacing: .3em;
+    margin-left: 2em;
+}
+ 
+nav ul li a{
+    text-decoration: none;
+    color: black;
+    line-height: 3em;
+    text-transform: uppercase;
+}
+ 
+nav ul li a:hover{ text-decoration: underline;}
+ 
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+#body-wrapper {
+    min-height: 100%;
+    position: relative;
+}
+
+#body-content {
+    margin-top: 100px;
+    padding-bottom: 99999px; /* footer의 높이 */
+}
+
+#image {
+    background-color: white;
+    line-height: 250px;
+}
+#image img{vertical-align: middle;}
+
+
+#info {
+    background-color: white;
+    line-height: 250px;
+}
+#info img{vertical-align: middle;}
+
+/* footer영역 */
+footer{
+    clear: both;
+    background-color: #333333;
+    color: white;
+    text-align: center;
+    padding: 1em 0px;
+    
+}
+
+
+    ul1{
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        float: right;
+    }
+    li1{
+        display: inline;
+        margin: 0 20px 0 0 ;
+    }
+
+
+    #nav1{
+        position: sticky;
+        top: 0;
+    }
