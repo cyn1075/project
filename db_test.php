@@ -1,7 +1,7 @@
 <?php
 echo "mysql 연결 테스트<br>";
 
-$con = mysqli_connect('13.124.103.127', 'choi', 'choichoi', 'project_user');
+$con = mysqli_connect('13.124.103.127', 'choi', 'choichoi', 'mysql','3306');
 
 if($con){
     echo "connect : 성공<br>";
