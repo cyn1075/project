@@ -10,11 +10,11 @@ body::before{
     content: "";
     position: absolute; z-index: 1;
     top: 0; right: 0; bottom: 0; left: 0;
-    background-color: rgba(0, 0, 0, .7);
+    
 }
 .login-form {position: relative; z-index: 2;}
 .login-form h1{
-    font-size: 32px; color: #fff;
+    font-size: 32px; color: black;
     text-align: center;
     margin-bottom: 60px;
     
@@ -30,7 +30,7 @@ body::before{
     background-color: transparent;
     border: none;
     border-bottom: 1px solid #999;
-    font-size: 18px; color: #fff;
+    font-size: 18px; color: black;
     outline: none;
 }
 .int-area label{
@@ -57,7 +57,7 @@ body::before{
 .btn-area {margin-top: 30px;}
 .btn-area button {
     width: 100%; height: 50px;
-    background: #fff;
+    background: #166cea;
     font-size: 20px;
     border: none;
     border-radius: 25px;
