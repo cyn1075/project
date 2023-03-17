@@ -2,8 +2,7 @@
 echo "mysql 연결 테스트<br>";
 
 $con = mysqli_connect('13.124.103.127', 'choi', 'choichoi', 'mysql','3306');
-
-$sql = "INSERT INTO main_user VALUES('testname', '3333')";
+$sql = "INSERT INTO main_user (id, pw) VALUES('testname', '3333')";
 
 
 echo $sql;
