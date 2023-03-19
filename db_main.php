@@ -23,5 +23,5 @@ echo $data['VERSION()'];
 
 <!DOCTYPE html>
     <ul1>
-        <li1><a href ="test.html">로그인하러 가기.</a></li1>
+        <li1><a href ="main.php">로그인하러 가기.</a></li1>
     </ul1>
