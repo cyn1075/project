@@ -29,7 +29,7 @@
                 <input type="password" class="form-control" id="password-check" placeholder="비밀번호를 다시 입력해 주세요.">
             </div>
 
-            <button type="button" id="signup-button" class="btn btn-primary mb-3" href="db_main.php">회원가입</button>
+            <button type="button" id="signup-button" class="btn btn-primary mb-3" onclick="location.href='db_main.php'">회원가입</button>
             <button type="button" id="cancel-button" class="btn btn-primary mb-3" href="test.html">취소</button>
         </div>
     </form>
