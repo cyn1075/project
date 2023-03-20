@@ -4,12 +4,12 @@ echo "mysql 연결 테스트<br>";
 $id = $_POST['name'];
 $pw = $_POST['password'];
 
-echo $id;
+echo $id ;
 echo $pw;
 
 
 $con = mysqli_connect('13.124.103.127', 'choi', 'choichoi', 'mysql','3306');
-$sql = "INSERT INTO main_user (id, pw) VALUES('{$_POST['name']}', '{$_POST['password']}')";
+$sql = "INSERT INTO main_user (id, pw) VALUES('{$id}', '{$_POST['password']}')";
 
 
 echo $sql;
