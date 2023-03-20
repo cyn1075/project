@@ -16,6 +16,7 @@ if (mysqli_num_rows($result) == 1) {
 
     if ($row['pw'] == $pw) {
         $_SESSION['userid'] = $id;
+        $_SESSION['last_login_timestamp'] =time();
         if (isset($_SESSION['userid'])) {
 ?> 
 

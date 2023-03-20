@@ -26,13 +26,12 @@
              if (isset($_SESSION['userid']))
               {
 
-                if((time() - $_SESSION['last_login_timestamp']) > 5)
+                if((time() - $_SESSION['last_login_timestamp']) > 10)
                 {
                     header("location:logout.php");
                 }  
                 else{
-                    session_regenerate_id(true);
-                    $_SESSION['last_login_timestamp'] =time();
+                    $_SESSION['last_login_timestamp'] = time();
                 }
             
             
