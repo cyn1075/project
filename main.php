@@ -25,12 +25,17 @@
 
              if (isset($_SESSION['userid']))
               {
-                $_SESSION['usertime'] = time();
 
-              } else if (time() - $_SESSION['usertime'] > 1800){
-
-              session_regenerate_id(true);
-              $_SESSION['usertime'] = time();
+                if((time() - $_SESSION['last_login_timestamp']) > 5)
+                {
+                    header("location:logout.php");
+                }  
+                else{
+                    session_regenerate_id(true);
+                    $_SESSION['last_login_timestamp'] =time();
+                }
+            
+            
               ?>
               <div class =login_sign_menu>
               <b> <?php echo $_SESSION['userid']; ?></b>님 반갑습니다. //
