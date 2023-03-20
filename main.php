@@ -23,7 +23,16 @@
 
             session_start();
 
-             if (isset($_SESSION['userid'])) {
+             if (isset($_SESSION['userid']))
+              {
+
+                if((time() - $_SESSION['last_login_timestamp']) > 900)
+                {
+                    header("location:logout.php");
+                }  
+                else{
+                    $_SESSION['last_login_timestamp'] =time();
+                }
               ?>
               <div class =login_sign_menu>
               <b> <?php echo $_SESSION['userid']; ?></b>님 반갑습니다. //

@@ -1,7 +1,9 @@
 <?php
 session_start();
-$res=session_destroy();
-if($res){
-    header('Location: main.php');
-}
+session_destroy();
 ?>
+<script>
+    alert("로그아웃 됐습니다.");
+    location.replace('main.php');
+</script>
+
