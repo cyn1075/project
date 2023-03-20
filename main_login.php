@@ -9,7 +9,7 @@
 <body>
     <section class="login-form">
         <h1>로그인 페이지</h1>
-        <form action="">
+        <form action="loginProcess.php" method="POST">
             <div class="int-area">
                 <input type="text" name="id" id="id"
                 autocomplete="off" required>
@@ -21,7 +21,7 @@
                 <label for="pw">비밀번호</label>
             </div>
             <div class="btn-area">
-                <button id = "btn" type="button">로그인</button>
+                <button id = "btn" type="submit">로그인</button>
             </div>
         </form>
         <div class="caption">
