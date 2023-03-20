@@ -19,12 +19,13 @@
 
                     }
                 }
-            }return;
+            }
+            return;
         }
 
         function openPopup(url){
             var cookieCheck = getCookie("popupYN");
-            if (cookieCheck != "N")window.open(url, '','width=450,heigh=520,left=0,top=0')
+            if (cookieCheck != "N")window.open(url, '','width=100,heigh=150,left=0,top=0')
         }
 
 
