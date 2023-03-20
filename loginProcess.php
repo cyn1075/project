@@ -1,42 +1,25 @@
 <?php
 session_start();
-$con = mysqli_connect('13.124.103.127', 'choi', 'choichoi', 'mysql','3306');
+$conn = mysqli_connect('13.124.103.127', 'choi', 'choichoi', 'mysql','3306');
 
-$id = $_POST['id'];
-$pw = $_POST['pw'];
+if ($conn->connect_error) {
+    die("연결실패: " . $conn->connect_error);
+}
 
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $username = $_POST["id"];
+    $password = $_POST["pw"];
 
-$query = "select * from main_user where id='$id'";
-$result = $connect->query($query);
+    $sql = "SELECT * FROM main_user WHERE id = '$username' and pw = '$password'";
+    $result = $conn->query($sql);
 
-if (mysqli_num_rows($result) == 1) {
-
-    $row = mysqli_fetch_assoc($result);
-
-    
-    if ($row['password'] == $pw) {    
-        $_SESSION['userid'] = $id;
-        if (isset($_SESSION['userid'])) {
-?> <script>
-                location.replace("main.php");
-            </script>
-        <?php
-        } else {
-            echo "session failed";
-        }
+    if ($result->num_rows > 0) {
+        session_start();
+        $_SESSION["username"] = $username;
+        header("location: welcome.php");
     } else {
-        ?> <script>
-            alert("아이디 또는 비밀번호를 확인해주세요.");
-            history.back(); 
-        </script>
-    <?php
+        $error = "아이디 또는 비밀번호가 잘못되었습니다.";
     }
-} else {
-    ?> <script>
-        alert("아이디 또는 비밀번호를 확인해주세요.");
-        history.back();
-    </script>
-<?php
 }
 ?>
 
