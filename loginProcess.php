@@ -1,6 +1,6 @@
 <?php
 session_start();
-$conn = mysqli_connect('13.124.103.127', 'choi', 'choichoi', 'mysql','3306');
+$connect = mysqli_connect('13.124.103.127', 'choi', 'choichoi', 'mysql','3306');
 
 
 $id = $_POST['id'];
@@ -17,15 +17,20 @@ if (mysqli_num_rows($result) == 1) {
     if ($row['pw'] == $pw) {
         $_SESSION['userid'] = $id;
         if (isset($_SESSION['userid'])) {
-?> <script>
-                location.replace("main.php");
-            </script>
-        <?php
+?> 
+
+<script>
+    location.replace("main.php");
+</script>
+
+<?php
         } else {
             echo "session failed";
         }
     } else {
-        ?> <script>
+        ?>
+        
+        <script>
             alert("아이디 또는 비밀번호를 확인해주세요.");
             history.back();
         </script>
