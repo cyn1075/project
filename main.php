@@ -24,9 +24,11 @@
             session_start();
 
              if (isset($_SESSION['userid'])) {
-              ?><b style="float:right;"> <?php echo $_SESSION['userid']; ?></b>님 반갑습니다. |
-              <a href="logout.php" style="float:right; font-size:15.5px;">로그아웃</a>
-              <br />
+              ?>
+              <div class =login_sign_menu>
+              <b> <?php echo $_SESSION['userid']; ?></b>님 반갑습니다. //
+              <a href="logout.php" font-size:15.5px;>로그아웃</a>
+              </div>
     <?php
     } else {
     ?>
