@@ -25,12 +25,12 @@
 
              if (isset($_SESSION['userid']))
               {
-                $_SESSION['userid'] = time();
+                $_SESSION['usertime'] = time();
 
-              } else if (time() - $_SESSION['userid'] > 1800){
+              } else if (time() - $_SESSION['usertime'] > 1800){
 
               session_regenerate_id(true);
-              $_SESSION['userid'] = time();
+              $_SESSION['usertime'] = time();
               ?>
               <div class =login_sign_menu>
               <b> <?php echo $_SESSION['userid']; ?></b>님 반갑습니다. //
