@@ -19,10 +19,36 @@
                 <a>Bob Escape Room</a>
             </h1>
 
-            <div class = login_sign_menu>
+            <?php
+
+            session_start();
+
+             if (isset($_SESSION['userid'])) {
+              ?><b><?php echo $_SESSION['userid']; ?></b>님 반갑습니다.
+              <button onclick="location.href='./logout_action.php'" style="float:right; font-size:15.5px;">로그아웃</button>
+              <br />
+    <?php
+    } else {
+    ?>
+        
+
+        <div class = login_sign_menu>
                 <a href ="main_login.php">로그인</a> |
                 <a href ="main_signup.php">회원가입</a>
             </div>
+
+    <?php
+    }
+    ?>
+
+
+
+
+
+
+            
+
+            
 
         </header>
     
