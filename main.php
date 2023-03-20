@@ -24,8 +24,8 @@
             session_start();
 
              if (isset($_SESSION['userid'])) {
-              ?><b><?php echo $_SESSION['userid']; ?></b>님 반갑습니다.
-              <button onclick="location.href='./logout_action.php'" style="float:right; font-size:15.5px;">로그아웃</button>
+              ?><b style="float:right;"> <?php echo $_SESSION['userid']; ?></b>님 반갑습니다. |
+              <a href="logout.php" style="float:right; font-size:15.5px;">로그아웃</a>
               <br />
     <?php
     } else {
