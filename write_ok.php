@@ -1,5 +1,5 @@
 <?php
-include $_SERVER['DOCUMENT_ROOT']."db_broard.php";
+include $_SERVER['DOCUMENT_ROOT']."db_board.php";
 
 $username = $_POST['name'];
 $userpw = password_hash($_POST['pw'], PASSWORD_DEFAULT);
@@ -7,10 +7,10 @@ $title = $_POST['title'];
 $connect = $_POST['content'];
 $date = date('Y-m-d');
 if($username && $userpw && $title && $connect){
-    $sql = mq("insert into board(name,pw,title,content,date) values('".$username."','".$userpw."','".$title."','".$content."','".$date."')"); 
+    $sql = mq("INSERT INTO board(name,pw,title,content,date) values('".$username."','".$userpw."','".$title."','".$content."','".$date."')"); 
     echo "<script>
     alert('글쓰기 완료되었습니다.');
-    location.href='/';</script>";
+    location.href='first_escape.php';</script>";
 }else{
     echo "<script>
     alert('글쓰기에 실패했습니다.');
