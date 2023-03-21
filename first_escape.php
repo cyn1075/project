@@ -44,11 +44,14 @@
 
     </tr>
 </tbody>
-<?php } ?>
-        </table>
+
+</table>
         <div id="write_btn">
             <a href="writer.php"><button>후기 작성하기</button></a>
         </div>
+
+<?php } ?>
+        
     </div>
 </body>
 </html>
