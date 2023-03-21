@@ -1,5 +1,5 @@
 <?php
-include $_SERVER['DOCUMENT_ROOT']."db_board.php"; 
+include $_SERVER['DOCUMENT_ROOT']."/db.php"; 
 
 $bno =$_GET['idx'];
 $username =$_GET['name'];
