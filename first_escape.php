@@ -23,18 +23,21 @@
                     <th width="100">조회수</th>
                 </tr>
             </thead>
+
             <?php
-            $sql =mq("select * from board order by idx desc limit 0.5");
-            while($board = $sql -> fetch_array())
-            {
-                $title=$board["title"];
-                if(strlen($title)>30)
-                {
-                    $title=str_replace($board["title"],mb_substr($board["title"],0,30,"utf-8")."...",$board["title"]);
-                }
+             $sql = mq("select * from board order by idx desc limit 0,5"); 
+             while($board = $sql->fetch_array())
+             {
+               
+               $title=$board["title"]; 
+               if(strlen($title)>30)
+               { 
+                
+                 $title=str_replace($board["title"],mb_substr($board["title"],0,30,"utf-8")."...",$board["title"]);
+               }
             
             ?>
-<tbody>
+           <tbody>
     <tr>
         <td width="70"><?php echo $board['idx']; ?></td>
         <td width="500"><a href="read.php?idx=<?php echo $board["idx"];?>"><?php echo $title; ?></a></td>
@@ -44,14 +47,11 @@
 
     </tr>
 </tbody>
-
+<?php } ?>
 </table>
         <div id="write_btn">
             <a href="writer.php"><button>후기 작성하기</button></a>
         </div>
-
-<?php } ?>
-        
     </div>
 </body>
 </html>
