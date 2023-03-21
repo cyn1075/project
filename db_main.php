@@ -4,7 +4,7 @@ echo "mysql 연결 테스트<br>";
 $id = $_POST['name'];
 $pw = $_POST['password'];
 
-echo $id ;
+echo $id;
 echo $pw;
 
 
