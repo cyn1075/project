@@ -28,7 +28,7 @@ include $_SERVER['DOCUMENT_ROOT']."/db.php";
 			</div>
 	<div id="bo_ser">
 		<ul>
-			<li><a href="/">[목록으로]</a></li>
+			<li><a href="first_escape.php">[목록으로]</a></li>
 			<li><a href="modify.php?idx=<?php echo $board['idx']; ?>">[수정]</a></li>
 			<li><a href="delete.php?idx=<?php echo $board['idx']; ?>">[삭제]</a></li>
 		</ul>
