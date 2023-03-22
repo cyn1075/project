@@ -6,10 +6,12 @@ $bno = $_GET['idx'];
 $sql = "delete from board where idx='$bno'";
 $sql1 = "SET @count=0";
 $sql2 = "update board set idx =@count:=@count+1";
+$sql3 = "ALTER TABLE idx AUTO_INCREMENT = 1";
 
 $result = mysqli_query($db, $sql);
 $result1 = mysqli_query($db, $sql1);
 $result2 = mysqli_query($db, $sql2);
+$result3 = mysqli_query($db, $sql3);
 
 
 if($db){
