@@ -158,44 +158,23 @@
         <script type="text/javascript">
         $(document).ready(function() {
             var myLatlng = new google.maps.LatLng(37.271735,127.013979);
-    var Y_point            = 37.271735;        
-    var X_point            = 127.013979;        
-    var zoomLevel        = 18;                
-    var markerTitle        = "학원";       
-    var markerMaxWidth    = 300;                
+            var Y_point = 37.271735;        
+            var X_point = 127.013979;        
+            var zoomLevel = 18;                
+            var markerTitle = "학원";       
+            var markerMaxWidth = 300;                
 
 
-    var contentString    = '<div>' +
-    '<h2>학원</h2>'+
-    '<p>여기가 학원 입니다.</p>' +
-
-    '</div>';
+    var contentString    = '<div>' + '<h2>학원</h2>'+ '<p>여기가 학원 입니다.</p>' + '</div>';
     var myLatlng = new google.maps.LatLng(Y_point, X_point);
-    var mapOptions = {
-                        zoom: zoomLevel,
-                        center: myLatlng,
-                        mapTypeId: google.maps.MapTypeId.ROADMAP
-                    }
-    var map = new google.maps.Map(document.getElementById('map_ma'), mapOptions);
-    var marker = new google.maps.Marker({
-                                            position: myLatlng,
-                                            map: map,
-                                            title: markerTitle
-    });
-    var infowindow = new google.maps.InfoWindow(
-                                                {
-                                                    content: contentString,
-                                                    maxWizzzdth: markerMaxWidth
-                                                }
-            );
-    google.maps.event.addListener(marker, 'click', function() {
-        infowindow.open(map, marker);
+    var mapOptions = { zoom: zoomLevel, center: myLatlng, mapTypeId: google.maps.MapTypeId.ROADMAP}
+    var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+    var marker = new google.maps.Marker({ position: myLatlng, map: map, title: markerTitle });
+    var infowindow = new google.maps.InfoWindow({content: contentString, maxWizzzdth: markerMaxWidth });
+    google.maps.event.addListener(marker, 'click', function() {infowindow.open(map, marker);
     });
 });
         </script>
-
-
-
     </div>    
 
     <footer>
