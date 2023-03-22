@@ -135,3 +135,6 @@ footer{
 .section [id="slide4"]:checked ~ .slidewrap .slidelist > li {transform: translateX(-300%);}
 
 
+.map{
+    text-align: center;
+}

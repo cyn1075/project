@@ -7,12 +7,6 @@
 	<title>Bob Escape Room</title>
 	<meta charset="utf-8">
     <link rel="stylesheet" href="./main.css">
-    <script defer src="./index.js"></script>
-    <script
-      defer
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAR31RzUchMxsBEwzaWgmsGgJSw9Lt9CpM&callback=initMap"
-    ></script>
-
 </head>
     <script type="text/javascript">
         function getCookie(name){
@@ -157,9 +151,11 @@
 
         </div>
 
-        <div class = "map" style="height: 600px;"></div>
+        <div class = "map">
+            <h3>카페 위치</h3>
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1122.5362999641413!2d127.0136957894005!3d37.271139709701536!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b43394e46887f%3A0x8d75edd3473ea43b!2z7IiY7JuQ7Ya16riw7YOAIOuupOymiOyVheq4sA!5e0!3m2!1sko!2skr!4v1679496408295!5m2!1sko!2skr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </iframe>
+        </div>
+        
     </div>    
 
     <footer>
