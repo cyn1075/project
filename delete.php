@@ -4,10 +4,12 @@ $db = mysqli_connect('13.124.103.127', 'choi', 'choichoi', 'mysql');
 
 $bno = $_GET['idx'];
 $sql = "delete from board where idx='$bno'";
-$sql = "SET @count=0";
-$sql = "update board set idx =@count:=@count+1";
+$sql1 = "SET @count=0";
+$sql2 = "update board set idx =@count:=@count+1";
 
 $result = mysqli_query($db, $sql);
+$result1 = mysqli_query($db, $sql1);
+$result2 = mysqli_query($db, $sql2);
 
 
 if($db){
