@@ -6,7 +6,17 @@ $bno = $ $_GET['idx'];
 $sql = "delete from board where idx='$bno';";
 
 $result = mysqli_query($db, $sql);
-?>
 
-<script type="text/javascript">alert("삭제되었습니다.");</script>
-<meta http-equiv="refresh" content="0 url=/" />
+
+if($db){
+    echo "<script>
+    alert('삭제되었습니다.');
+    location.href='first_escape.php';</script>";
+}else{
+    echo "<script>
+    alert('삭제에 실패했습니다.');
+    history.back();</script>";
+}
+
+
+?>
