@@ -2,7 +2,7 @@
 include $_SERVER['DOCUMENT_ROOT']."/db.php";
    
 $bno = $_GET['idx'];
-$sql = "select * from board where idx='$bno';";
+$sql = mq("select * from board where idx='$bno';");
 $board = $sql->fetch_array();
 ?>
 <!DOCTYPE html>
