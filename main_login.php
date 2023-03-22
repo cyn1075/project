@@ -51,7 +51,7 @@
 
         const signupButton = document.querySelector("#btn");
         signupForm.submit();
-            location.href ="main.php"
+            location.href ="index.php"
     </script>
 
 </body>

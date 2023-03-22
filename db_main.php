@@ -1,34 +1,31 @@
 <?php
-echo "mysql 연결 테스트<br>";
+
+
+
+$con = mysqli_connect('13.124.103.127', 'choi', 'choichoi', 'mysql','3306');
+
 
 $id = $_POST['name'];
 $pw = $_POST['password'];
 
-echo $id;
-echo $pw;
 
-
-$con = mysqli_connect('13.124.103.127', 'choi', 'choichoi', 'mysql','3306');
 $sql = "INSERT INTO main_user (id, pw) VALUES('{$id}', '{$_POST['password']}')";
 
-
-echo $sql;
 $result = mysqli_query($con, $sql);
 
 if($con){
-    echo "connect : 성공<br>";
+    echo "<script>
+    alert('회원가입 됐습니다.');
+    location.href='index.php';</script>";
 }
 else{
-    echo "disconnect : 실패<br>";
+    echo "<script>
+    alert('회원가입에 실패했습니다.');
+    history.back();</script>";
 }
  
 $sql = 'SELECT VERSION()';
 $result = mysqli_query($con, $sql);
 $data = mysqli_fetch_assoc($result);
-echo $data['VERSION()'];
-?>
 
-<!DOCTYPE html>
-    <ul1>
-        <li1><a href ="main.php">로그인하러 가기.</a></li1>
-    </ul1>
+?>

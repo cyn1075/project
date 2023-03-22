@@ -1,13 +1,17 @@
 <?php
-include $_SERVER['DOCUMENT_ROOT']."/db.php";
+$db = mysqli_connect('13.124.103.127', 'choi', 'choichoi', 'mysql');
 
 $username = $_POST['name'];
-$userpw = password_hash($_POST['pw'], PASSWORD_DEFAULT);
+$userpw = $_POST['pw'] ;
 $title = $_POST['title'];
 $content = $_POST['content'];
 $date = date('Y-m-d');
-if($username && $userpw && $title && $content){
-    $sql = mq("INSERT INTO board(name,pw,title,content,date) values('{$username}','{$userpw}','{$title}','{$content}','{$date}')"); 
+
+    $sql = "INSERT INTO board(name,pw,title,content,date,hit) values('{$username}','{$userpw}','{$title}','{$content}','{$date}','0')";
+$result = mysqli_query($db, $sql);
+
+
+if($db){
     echo "<script>
     alert('글쓰기 완료되었습니다.');
     location.href='first_escape.php';</script>";

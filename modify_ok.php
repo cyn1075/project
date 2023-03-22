@@ -1,13 +1,27 @@
 <?php
-include $_SERVER['DOCUMENT_ROOT']."/db.php"; 
+$db = mysqli_connect('13.124.103.127', 'choi', 'choichoi', 'mysql');
 
 $bno =$_GET['idx'];
 $username =$_GET['name'];
-$userpw = password_hash($_POST['pw'], PASSWORD_DEFAULT);
+$userpw = $_POST['pw'];
 $title = $_POST['title'];
 $content = $_POST['content'];
-$sql = mq("update board set name='".$username."', pw='".$userpw."', title='".$title."',content='".$content."' where idx='".$bno."'");
+$sql = "update board set name='".$username."', pw='".$userpw."', title='".$title."',content='".$content."' where idx='".$bno."'";
+
+$result = mysqli_query($db, $sql);
+
+if($db){
+    echo "<script>
+    alert('수정 되었습니다.');
+    location.href='first_escape.php';</script>";
+}else{
+    echo "<script>
+    alert('수정에 실패했습니다.');
+    history.back();</script>";
+}
+
 ?>
 
-<script type="text/javascript">alert("수정되었습니다."); </script>
-<meta http-equiv="refresh" content="0 url=read.php?idx=<?php echo $bno; ?>">
+
+
+
