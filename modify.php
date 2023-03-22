@@ -1,8 +1,8 @@
 <?php
-include $_SERVER['DOCUMENT_ROOT']."/db.php"; 
+$db = mysqli_connect('13.124.103.127', 'choi', 'choichoi', 'mysql');
 $bno = $_GET['idx'];
-	$sql = mq("select * from board where idx='$bno';");
-	$board = $sql->fetch_array();
+	$sql = "select * from board where idx='$bno';";
+	$result = mysqli_query($db, $sql);
 ?>
 <!DOCTYPE html>
 <head>
