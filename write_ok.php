@@ -8,7 +8,14 @@ $content = $_POST['content'];
 $date = date('Y-m-d');
 
     $sql = "INSERT INTO board(name,pw,title,content,date,hit) values('{$username}','{$userpw}','{$title}','{$content}','{$date}','0')";
+    $sql1 = "SET @count=0";
+    $sql2 = "update board set idx =@count:=@count+1";
+    $sql3 = "ALTER TABLE idx AUTO_INCREMENT = 1";
+
 $result = mysqli_query($db, $sql);
+$result1 = mysqli_query($db, $sql1);
+$result2 = mysqli_query($db, $sql2);
+$result3 = mysqli_query($db, $sql3);
 
 
 if($db){
