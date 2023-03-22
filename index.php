@@ -49,7 +49,7 @@
              if (isset($_SESSION['userid']))
               {
 
-                if((time() - $_SESSION['last_login_timestamp']) > 10)
+                if((time() - $_SESSION['last_login_timestamp']) > 1800)
                 {
                     header("location:logout.php");
                 }  
