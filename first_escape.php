@@ -44,7 +44,7 @@
                   $block_end = $block_start + $block_ct -1;
 
                   $total_page = ceil($row_num / $list);
-                  if($block_end > $total_pase) $block_end = $total_page;
+                  if($block_end > $total_page) $block_end = $total_page;
                   $total_block = ceil($total_page / $block_ct);
                   $start_num = ($page-1) * $list;
 
