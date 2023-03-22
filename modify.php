@@ -13,8 +13,8 @@ $board = $sql->fetch_array();
 </head>
 <body>
     <div id="board_write">
-        <h1><a href="/">자유게시판</a></h1>
-        <h4>글을 수정합니다.</h4>
+        <h1><a href="/">작성한 글 수정하기</a></h1>
+        <h4>글을 수정하고 다시 저장해주세요.</h4>
             <div id="write_area">
                 <form action="/modify_ok.php?idx=<?php echo $bno; ?>" method="post">
                     <div id="in_title">
@@ -32,7 +32,7 @@ $board = $sql->fetch_array();
                         <input type="password" name="pw" id="upw"  placeholder="비밀번호" required />  
                     </div>
                     <div class="bt_se">
-                        <button type="submit">글 작성</button>
+                        <button type="submit">글 수정 완료</button>
                     </div>
                 </form>
             </div>
