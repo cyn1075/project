@@ -135,4 +135,3 @@ footer{
 .section [id="slide4"]:checked ~ .slidewrap .slidelist > li {transform: translateX(-300%);}
 
 
-#map {width:100%; height:400px; clear:both; border:solid 1px red;}
