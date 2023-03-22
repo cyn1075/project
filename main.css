@@ -133,3 +133,6 @@ footer{
 .section [id="slide2"]:checked ~ .slidewrap .slidelist > li {transform: translateX(-100%);}
 .section [id="slide3"]:checked ~ .slidewrap .slidelist > li {transform: translateX(-200%);}
 .section [id="slide4"]:checked ~ .slidewrap .slidelist > li {transform: translateX(-300%);}
+
+
+#map {width:100%; height:400px; clear:both; border:solid 1px red;}

@@ -7,11 +7,9 @@
 	<title>Bob Escape Room</title>
 	<meta charset="utf-8">
     <link rel="stylesheet" href="./main.css">
-    <script defer src="./index.js"></script>
-  <script
-    defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAR31RzUchMxsBEwzaWgmsGgJSw9Lt9CpM&callback=initMap"
-  ></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?key= AIzaSyAR31RzUchMxsBEwzaWgmsGgJSw9Lt9CpM" ></script>
+
 </head>
     <script type="text/javascript">
         function getCookie(name){
@@ -156,7 +154,45 @@
 
         </div>
 
-        <div class = "map" style="height: 600px;"></div>
+        <div class = "map"></div>
+        <script type="text/javascript">
+        $(document).ready(function() {
+            var myLatlng = new google.maps.LatLng(37.271735,127.013979);
+    var Y_point            = 37.271735;        
+    var X_point            = 127.013979;        
+    var zoomLevel        = 18;                
+    var markerTitle        = "학원";       
+    var markerMaxWidth    = 300;                
+
+
+    var contentString    = '<div>' +
+    '<h2>학원</h2>'+
+    '<p>여기가 학원 입니다.</p>' +
+
+    '</div>';
+    var myLatlng = new google.maps.LatLng(Y_point, X_point);
+    var mapOptions = {
+                        zoom: zoomLevel,
+                        center: myLatlng,
+                        mapTypeId: google.maps.MapTypeId.ROADMAP
+                    }
+    var map = new google.maps.Map(document.getElementById('map_ma'), mapOptions);
+    var marker = new google.maps.Marker({
+                                            position: myLatlng,
+                                            map: map,
+                                            title: markerTitle
+    });
+    var infowindow = new google.maps.InfoWindow(
+                                                {
+                                                    content: contentString,
+                                                    maxWizzzdth: markerMaxWidth
+                                                }
+            );
+    google.maps.event.addListener(marker, 'click', function() {
+        infowindow.open(map, marker);
+    });
+});
+        </script>
 
 
 
