@@ -7,6 +7,12 @@
 	<title>Bob Escape Room</title>
 	<meta charset="utf-8">
     <link rel="stylesheet" href="./main.css">
+    <script defer src="./index.js"></script>
+  <script
+    defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAR31RzUchMxsBEwzaWgmsGgJSw9Lt9CpM&callback=initMap"
+  ></script>
+</head>
     <script type="text/javascript">
         function getCookie(name){
             var cookie =document.cookie;
@@ -84,7 +90,7 @@
                 <li><a href="#logo">Home</a></li>
                 <li><a href="#section">인기순위</a></li>
                 <li><a href="#reservation">예약하기</a></li>
-                <li><a href="#image">카페위치</a></li>
+                <li><a href="#map">카페위치</a></li>
             </ul>
         </nav>
 
@@ -149,6 +155,8 @@
             </div>
 
         </div>
+
+        <div class = "map" style="height: 600px;"></div>
 
 
 
