@@ -10,6 +10,7 @@
     /* 그럼 바텀은 아래쪽에 영역을 준다. 라는 의미일듯? */
     margin-top: 10px; margin-bottom: 10px; top: 0; left: 0;
     position: sticky;
+    z-index: 2;
 }
 
 .menu ul{
@@ -22,7 +23,7 @@
     /* 바텀이니 밑단을 꾸며자는 속성 */
     border-bottom: 2px solid black;
     text-align: center;
-    background-color: white !important;
+    background-color: white;
 }
 
 .menu ul li{
@@ -104,6 +105,7 @@ footer{
 .section{
     /* width: 100%;
     height: 100vh; */
+    z-index: 1;
 }
 
 .section h2 {
