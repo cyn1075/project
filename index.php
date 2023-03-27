@@ -82,10 +82,10 @@
 
         <nav class = "menu">
             <ul>
-                <li><a href="#logo">Home</a></li>
-                <li><a href="#section">인기순위</a></li>
-                <li><a href="#reservation">예약하기</a></li>
-                <li><a href="#map">카페위치</a></li>
+                <li><a id='menu1'>Home</a></li>
+                <li><a id='menu2'>인기순위</a></li>
+                <li><a id='menu3'>예약하기</a></li>
+                <li><a id='menu4'>카페위치</a></li>
             </ul>
         </nav>
 
@@ -156,7 +156,39 @@
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1122.5362999641413!2d127.0136957894005!3d37.271139709701536!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b43394e46887f%3A0x8d75edd3473ea43b!2z7IiY7JuQ7Ya16riw7YOAIOuupOymiOyVheq4sA!5e0!3m2!1sko!2skr!4v1679496408295!5m2!1sko!2skr" width="800" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
         
-    </div>    
+    </div>   
+    
+    <script>
+        const menu1 = document.getElementById('menu1');
+        const menu2 = document.getElementById('menu2');
+        const menu3 = document.getElementById('menu3');
+        const menu4 = document.getElementById('menu4');
+
+        const section1 = document.getElementById('logo');
+        const section2 = document.getElementById('section');
+        const section3 = document.getElementById('reservation');
+        const section4 = document.getElementById('map');
+
+        menu1.addEventListener('click', () => {
+            window.scrollBy({top: section1.getBoundingClientRect().top, behavior: 'smooth'});
+        });
+        menu2.addEventListener('click', () => {
+            window.scrollBy({top: section2.getBoundingClientRect().top, behavior: 'smooth'});
+        });
+        menu3.addEventListener('click', () => {
+            window.scrollBy({top: section3.getBoundingClientRect().top, behavior: 'smooth'});
+        });
+        menu4.addEventListener('click', () => {
+            window.scrollBy({top: section4.getBoundingClientRect().top, behavior: 'smooth'});
+        });
+        
+
+    </script>
+
+
+
+
+
 
     <footer>
         Bob Escape Room<br>
