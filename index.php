@@ -152,7 +152,7 @@
         </div>
 
         <div class = "map">
-            <h3>카페 위치</h3>
+            <h3 id = "map">카페 위치</h3>
             <!-- style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade -->
             <!-- allowfullscreen 전체화면을 허용하고 싶을때 쓴다. -->
             <!-- lazy 로딩이란 이미지 태그가 뷰안에 위치하게 되었을때 load 하는 것을 의미한다. eager 페이지의 위치에 관계없이 리소스를 즉시 로드한다.  -->
