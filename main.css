@@ -22,7 +22,7 @@
     /* 바텀이니 밑단을 꾸며자는 속성 */
     border-bottom: 2px solid black;
     text-align: center;
-    background-color: white;
+    background-color: white !important;
 }
 
 .menu ul li{
