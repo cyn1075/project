@@ -65,7 +65,7 @@
 
     width: 100%;
     /* width 너비인데 %는 부모의 영향을 받는다.  */
-    
+    top: 50%;
     height: 70vh;
     /* height는 높이, vh는 열려있는 화면의 상대길이이기 때문에 스크롤바를 포함한 길이를 반환한다. */
 }
@@ -100,7 +100,7 @@ html, body {
 .container{
     max-width: 1200px;
     margin: auto;
-    background: #b3b2b2;
+    background: white;
     overflow: auto;
     text-align: center;
     
@@ -108,7 +108,7 @@ html, body {
 
 .gallery{
     margin: 5px;
-    border: 1px solid #ffffff;
+    border: 1px solid black;
     float: left;
     width: 390px;
 }

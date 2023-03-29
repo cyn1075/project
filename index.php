@@ -99,8 +99,8 @@
             </p>
         </div>
 
-        <div class="container">
-            <h2> 인기 순위 </h2>
+        <div class= "container">
+            <h2 id="container"> 인기 순위 </h2>
             <div class="gallery">
                 <img src="2.jpg">
                 <div class="desc">첫번째 방탈출</div>
