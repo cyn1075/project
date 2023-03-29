@@ -90,7 +90,7 @@
         </nav>
 
         <div class = "popularity">
-            <h1>Bob 방탈출 소개</h1>
+            <h1 style="border:1px solid black;">Bob 방탈출 소개</h1>
             <img src = "main_image.jpg" width="800" height="400">
             <p>Bob의 방탈출 카페 홈페이지에 오신 여러분들을 환영합니다.<br>
                여러가지 테마의 방탈출을 60분 내에 성공해보세요. <br>
@@ -99,8 +99,8 @@
             </p>
         </div>
 
-        <div class= "container">
-            <h2 id="container"> 인기 순위 </h2>
+        <div id= "container">
+            <h2 style="border:1px solid black;"> 방탈출 리스트 </h2>
             <div class="gallery">
                 <img src="2.jpg">
                 <div class="desc">첫번째 방탈출</div>
@@ -135,7 +135,7 @@
        
 
         <div class = "map">
-            <h3 id = "map">카페 위치</h3>
+            <h3 id = "map" style="border:1px solid black;" >카페 위치</h3>
             <!-- style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade -->
             <!-- allowfullscreen 전체화면을 허용하고 싶을때 쓴다. -->
             <!-- lazy 로딩이란 이미지 태그가 뷰안에 위치하게 되었을때 load 하는 것을 의미한다. eager 페이지의 위치에 관계없이 리소스를 즉시 로드한다.  -->
