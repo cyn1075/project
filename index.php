@@ -103,7 +103,7 @@
             <h1> 방탈출 리스트 </h1>
             <div class="gallery">
                 <img src="1.jpg">
-                <div class="desc">템포 루바토<br></div>
+                <div class="desc"><a href="first_escape.php">템포 루바토</a></div>
             </div>
 
             <div class="gallery">
