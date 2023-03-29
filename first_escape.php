@@ -6,12 +6,13 @@
     <link rel="stylesheet" type="text/css" href="first.css"/>
 </head>
 <body>
-    <div id="board_area">
-        <h1 style="text-align: center;"> Tempo Rubato </h1>
-        <img src = "1.webp" width="800" height="400">
+    <div id="board_area" style="text-align: center;">
+        <h1> Tempo Rubato </h1>
+        <img src = "1.jpg" width="800" height="400">
             <p style="text-align: center">어느날 아침,<br>
                집 앞에 작은 상자가 하나 놓여 있었다.<br>
                <br>
+               난이도 : ★★★★★  // 제한 시간 : 60:00
         <h4> 방탈출 후기를 남겨주세요.</h4>
         <table class="list-table">
             <thead>
