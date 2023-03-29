@@ -103,27 +103,27 @@
             <h1> 방탈출 리스트 </h1>
             <div class="gallery">
                 <img src="1.jpg">
-                <div class="desc"><a href="first_escape.php">템포 루바토</a></div>
+                <div class="desc"><a href="first_escape.php">열쇠공의 이중생활</a></div>
             </div>
 
             <div class="gallery">
                 <img src="2.jpg">
-                <div class="desc">열쇠공의 이중생활</div>
-            </div>
-
-            <div class="gallery">
-                <img src="3.jpg">
                 <div class="desc">미씽</div>
             </div>
 
             <div class="gallery">
-                <img src="4.jpg">
+                <img src="3.jpg">
                 <div class="desc">운명</div>
             </div>
 
             <div class="gallery">
+                <img src="4.jpg">
+                <div class="desc">전래동 살인사건</div>
+            </div>
+
+            <div class="gallery">
                 <img src="5.jpg">
-                <div class="desc">전래동 자살사건</div>
+                <div class="desc">디어 마르시</div>
             </div>
 
             <div class="gallery">
