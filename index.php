@@ -83,7 +83,7 @@
         <nav class = "menu">
             <ul>
                 <li><a id='menu1'>Home</a></li>
-                <li><a id='menu2'>인기순위</a></li>
+                <li><a id='menu2'>방탈출 리스트</a></li>
                 <li><a id='menu3'>예약하기</a></li>
                 <li><a id='menu4'>카페위치</a></li>
             </ul>
@@ -100,7 +100,7 @@
         </div>
 
         <div class="container">
-
+            <h2> 인기 순위 </h2>
             <div class="gallery">
                 <img src="2.jpg">
                 <div class="desc">첫번째 방탈출</div>
@@ -151,31 +151,31 @@
 
 
     <script>
-    const menu1 = document.getElementById('menu1');
-    const menu2 = document.getElementById('menu2');
-    const menu3 = document.getElementById('menu3');
-    const menu4 = document.getElementById('menu4');
+      const menu1 = document.getElementById('menu1');
+      const menu2 = document.getElementById('menu2');
+      const menu3 = document.getElementById('menu3');
+      const menu4 = document.getElementById('menu4');
 
-    const section1 = document.getElementById('logo');
-    const section2 = document.getElementById('container');
-    const section3 = document.getElementById('reservation');
-    const section4 = document.getElementById('map');
+      const section1 = document.getElementById('logo');
+      const section2 = document.getElementById('container');
+      const section3 = document.getElementById('reservation');
+      const section4 = document.getElementById('map');
 
-    menu1.addEventListener('click', () => {
+      menu1.addEventListener('click', () => {
         window.scrollBy({top: section1.getBoundingClientRect().top, behavior: 'smooth'});
-    });
-    menu2.addEventListener('click', () => {
+      });
+      menu2.addEventListener('click', () => {
         window.scrollBy({top: section2.getBoundingClientRect().top, behavior: 'smooth'});
-    });
-    menu3.addEventListener('click', () => {
+      });
+      menu3.addEventListener('click', () => {
         window.scrollBy({top: section3.getBoundingClientRect().top, behavior: 'smooth'});
-    });
-    menu4.addEventListener('click', () => {
+      });
+      menu4.addEventListener('click', () => {
         window.scrollBy({top: section4.getBoundingClientRect().top, behavior: 'smooth'});
-    });
+      });
     
 
-</script>
+    </script>
 
 
 
