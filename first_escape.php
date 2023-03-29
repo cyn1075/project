@@ -24,57 +24,88 @@
                 </tr>
             </thead>
 
+
+
+
+
             <?php
+            echo 1;
             if(isset($_GET['page'])){
+              echo 2;
                 $page = $_GET['page'];
+                echo 3;
                   }else{
+                    echo 4;
                     $page = 1;
+                    echo 5;
                   }
 
+                  echo 6;
                   $sql = mq("select * from board");
+                  echo 7;
                   $row_num = mysqli_num_rows($sql);
+                  echo 8;
 
                   //한페이지에 보여질 개수
                   $list = 3;
+                  echo 9;
                   //밑에 보여질 페이지 개수 
                   $block_ct = 5;
 
+                  echo 10;
                   $block_num = ceil($page/$block_ct);
+                  echo 11;
                   $block_start = (($block_num - 1 ) * $block_ct) + 1;
+                  echo 12;
                   $block_end = $block_start + $block_ct -1;
+                  echo 13;
 
                   $total_page = ceil($row_num / $list);
+                  echo 14;
                   if($block_end > $total_page) $block_end = $total_page;
+                  echo 15;
                   $total_block = ceil($total_page / $block_ct);
+                  echo 16;
                   $start_num = ($page-1) * $list;
+                  echo 17;
 
 
 
 
 
-
-             $sql5 = mq("select * from board order by idx desc limit $start_num, $list"); 
+             $sql5 = mq("select * from board order by idx desc limit $start_num, $list");
+             echo 18; 
              while($board = $sql5->fetch_array())
+             echo 19;
              {
-               $title=$board["title"]; 
+              echo 20;
+               $title=$board["title"];
+               echo 21; 
                if(strlen($title)>30)
+               
                { 
+                echo 22; 
                 
                  $title=str_replace($board["title"],mb_substr($board["title"],0,30,"utf-8")."...",$board["title"]);
-               }
+                 echo 23;
+                }
                
-            
+                echo 24;
             ?>
+            
           <tbody>
+          
               <tr>
-               <td width="70"><?php echo $board['idx']; ?></td>
-               <td width="500"><a href="/read.php?idx=<?php echo $board["idx"];?>"><?php echo $title;?></a></td>
-               <td width="120"><?php echo $board['name'];?></td>
-               <td width="100"><?php echo $board['date'];?></td>
-               <td width="100"><?php echo $board['hit']; ?></td>
+               <td width="70"><?php echo $board['idx']; echo 25; ?></td>
+               <td width="500"><a href="/read.php?idx=<?php echo $board["idx"]; echo 26;?>"><?php echo $title;?></a></td>
+               <td width="120"><?php echo $board['name']; echo 27;?></td>
+               <td width="100"><?php echo $board['date']; echo 28;?></td>
+               <td width="100"><?php echo $board['hit']; echo 29;?></td>
              </tr>
             </tbody>
-<?php } ?>
+<?php } 
+echo 30;?>
+
 </table>
 
 
@@ -113,8 +144,13 @@
             echo "<li><a href='?page=$total_page'>마지막</a></li>";
           }
         ?>
+
+
+
+
+
     </ul>
-</div>
+</div> 
 
         <div id="write_btn">
             <a href="writer.php"><button>후기 작성하기</button></a>
