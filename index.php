@@ -102,33 +102,33 @@
         <div id= "container">
             <h1> 방탈출 리스트 </h1>
             <div class="gallery">
-                <img src="2.jpg">
-                <div class="desc">첫번째 방탈출</div>
+                <img src="1.jpg">
+                <div class="desc">템포 루바토<br></div>
             </div>
 
             <div class="gallery">
                 <img src="2.jpg">
-                <div class="desc">두번째 방탈출</div>
+                <div class="desc">열쇠공의 이중생활</div>
             </div>
 
             <div class="gallery">
-                <img src="2.jpg">
-                <div class="desc">세번째 방탈출</div>
+                <img src="3.jpg">
+                <div class="desc">미씽</div>
             </div>
 
             <div class="gallery">
-                <img src="2.jpg">
-                <div class="desc">네번째 방탈출</div>
+                <img src="4.jpg">
+                <div class="desc">운명</div>
             </div>
 
             <div class="gallery">
-                <img src="2.jpg">
-                <div class="desc">서비스 준비중 입니다. <br> 더 좋은 모습으로 찾아뵙겠습니다.</div>
+                <img src="5.jpg">
+                <div class="desc">전래동 자살사건</div>
             </div>
 
             <div class="gallery">
-                <img src="2.jpg">
-                <div class="desc">서비스 준비중 입니다. <br> 더 좋은 모습으로 찾아뵙겠습니다.</div>
+                <img src="6.jpg">
+                <div class="desc">서비스 준비중 입니다.</div>
             </div>
         </div>
 
