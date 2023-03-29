@@ -193,6 +193,39 @@
 
 
 
+<div class="container">
+
+            <div class="gallery">
+                <img src="2.jpg">
+                <div class="desc">첫번째 방탈출</div>
+            </div>
+
+            <div class="gallery">
+                <img src="2.jpg">
+                <div class="desc">두번째 방탈출</div>
+            </div>
+
+            <div class="gallery">
+                <img src="2.jpg">
+                <div class="desc">세번째 방탈출</div>
+            </div>
+
+            <div class="gallery">
+                <img src="2.jpg">
+                <div class="desc">네번째 방탈출</div>
+            </div>
+
+            <div class="gallery">
+                <img src="2.jpg">
+                <div class="desc">서비스 준비중 입니다. <br> 너 좋은 서비스로 보답하겠습니다.</div>
+            </div>
+
+            <div class="gallery">
+                <img src="2.jpg">
+                <div class="desc">서비스 준비중 <br>입니다.</div>
+            </div>
+        </div>
+
 
 
 

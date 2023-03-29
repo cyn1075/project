@@ -1,7 +1,9 @@
 .logo {
     font-style: italic;
 }
-
+*{
+    box-sizing: border-box;
+}
 
 
 .menu{
@@ -10,6 +12,7 @@
     /* 그럼 바텀은 아래쪽에 영역을 준다. 라는 의미일듯? */
     margin-top: 10px; margin-bottom: 10px; top: 0; left: 0;
     position: sticky;
+    position: relative;
     z-index: 2;
 }
 
@@ -63,7 +66,7 @@
     width: 100%;
     /* width 너비인데 %는 부모의 영향을 받는다.  */
     
-    height: 25vh;
+    height: 10vh;
     /* height는 높이, vh는 열려있는 화면의 상대길이이기 때문에 스크롤바를 포함한 길이를 반환한다. */
 }
 
@@ -83,6 +86,7 @@
 /* 아무것도 없는건 그냥 해당 태그 영역에 디자인을 부분적으로 사용할 때 */
 html, body {
     height: 100%;
+    margin: 0;
   }
 
 
@@ -177,4 +181,29 @@ footer{
 .map{
     text-align: center;
    
+}
+
+.container{
+    max-width: 1200px;
+    margin: auto;
+    background: #f2f2f2;
+    overflow: auto;
+    
+}
+
+.gallery{
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 390px;
+}
+
+.gallery img {
+    width: 100%;
+    
+}
+
+.desc{
+    padding: 15px;
+    text-align: center;
 }
