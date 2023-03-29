@@ -13,8 +13,8 @@
             옆집 귀금속점 주인이 일전에 의뢰한 물건이 맘에 쏙 들었는지 귀한 답례품을 주고 갔다.<br>
             흠 근데 이거 뭘 준거지?<br>
             구두쇠 녀석이 비싼 걸 줬을 리 없으니 의심부터 해봐야겠어!<br>
-            자, 어디한번 보러 가볼까?<br>
-               난이도 : ★★★★★  // 제한 시간 : 60:00<br>
+            자, 어디한번 보러 가볼까?<br><br>
+               난이도 : ★★★★★  // 제한 시간 : 60:00<br><br>
         <h4> 방탈출 후기를 남겨주세요.</h4>
         <table class="list-table">
             <thead>
@@ -119,9 +119,11 @@
     </ul>
 </div>
 
-        <div id="write_btn">
+        
+    </div>
+
+    <div id="write_btn">
             <a href="writer.php"><button>후기 작성하기</button></a>
         </div>
-    </div>
 </body>
 </html>
