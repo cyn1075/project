@@ -100,100 +100,7 @@
             </p>
         </div>
 
-        <div class="section">
-          <h2 id="section">방탈출 리스트</h2>
-            <input type="radio" name="slide" id="slide1" checked>
-            <input type="radio" name="slide" id="slide2">
-            <input type="radio" name="slide" id="slide3">
-            <input type="radio" name="slide" id="slide4">
-
-            <div class="slidewrap">
-                <ul class="slidelist">
-                    <li> 
-
-                        <a href="first_escape.php">
-                            <label for="slide4" class="left"></label>
-                            <img src="1.webp" width="800" height="400">
-                            <label for="slide2" class="right"></label>
-                        </a>
-
-                    </li>
-                    <li>
-                    
-                        <a>
-                            <label for="slide1" class="left"></label>
-                            <img src="2.jpg" width="800" height="400">
-                            <label for="slide3" class="right"></label>
-                        </a>
-                            
-                    </li>
-                    <li>
-                            
-                        <a> 
-                            <label for="slide2" class="left"></label>
-                            <img src="3.jpg" width="800" height="400">
-                            <label for="slide4" class="right"></label>  
-                        </a>
-                             
-                    </li>
-                    <li>
-                            
-                        <a>
-                            <label for="slide3" class="left"></label>
-                            <img src="4.jpg" width="800" height="400">
-                            <label for="slide1" class="right"></label>
-                        </a>
-                        
-                    </li>
-
-                </ul>
-            </div>
-
-        </div>
-
-        <div class = "map">
-            <h3 id = "map">카페 위치</h3>
-            <!-- style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade -->
-            <!-- allowfullscreen 전체화면을 허용하고 싶을때 쓴다. -->
-            <!-- lazy 로딩이란 이미지 태그가 뷰안에 위치하게 되었을때 load 하는 것을 의미한다. eager 페이지의 위치에 관계없이 리소스를 즉시 로드한다.  -->
-            <!-- no-referrer-when-downgrade 대상주소가 http 일때만 전송한다.
-            strict-origin-when-cross-origin 대상 주소의 도메인이 같을 경우 전송. 
-            unsafe-url 무조건 그냥 다 전송하기. -->
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1122.5362999641413!2d127.0136957894005!3d37.271139709701536!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b43394e46887f%3A0x8d75edd3473ea43b!2z7IiY7JuQ7Ya16riw7YOAIOuupOymiOyVheq4sA!5e0!3m2!1sko!2skr!4v1679496408295!5m2!1sko!2skr" width="800" height="400" style="border:none;" allowfullscreen="" loading="lazy" referrerpolicy="unsafe-url"></iframe>
-        </div>
-        
-    </div>   
-    
-    <script>
-        const menu1 = document.getElementById('menu1');
-        const menu2 = document.getElementById('menu2');
-        const menu3 = document.getElementById('menu3');
-        const menu4 = document.getElementById('menu4');
-
-        const section1 = document.getElementById('logo');
-        const section2 = document.getElementById('section');
-        const section3 = document.getElementById('reservation');
-        const section4 = document.getElementById('map');
-
-        menu1.addEventListener('click', () => {
-            window.scrollBy({top: section1.getBoundingClientRect().top, behavior: 'smooth'});
-        });
-        menu2.addEventListener('click', () => {
-            window.scrollBy({top: section2.getBoundingClientRect().top, behavior: 'smooth'});
-        });
-        menu3.addEventListener('click', () => {
-            window.scrollBy({top: section3.getBoundingClientRect().top, behavior: 'smooth'});
-        });
-        menu4.addEventListener('click', () => {
-            window.scrollBy({top: section4.getBoundingClientRect().top, behavior: 'smooth'});
-        });
-        
-
-    </script>
-
-
-
-<div class="container">
+        <div class="container">
 
             <div class="gallery">
                 <img src="2.jpg">
@@ -217,14 +124,34 @@
 
             <div class="gallery">
                 <img src="2.jpg">
-                <div class="desc">서비스 준비중 입니다. <br> 너 좋은 서비스로 보답하겠습니다.</div>
+                <div class="desc">서비스 준비중 입니다. <br> 더 좋은 모습으로 찾아뵙겠습니다.</div>
             </div>
 
             <div class="gallery">
                 <img src="2.jpg">
-                <div class="desc">서비스 준비중 <br>입니다.</div>
+                <div class="desc">서비스 준비중 입니다. <br> 더 좋은 모습으로 찾아뵙겠습니다.</div>
             </div>
         </div>
+
+       
+
+        <div class = "map">
+            <h3 id = "map">카페 위치</h3>
+            <!-- style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade -->
+            <!-- allowfullscreen 전체화면을 허용하고 싶을때 쓴다. -->
+            <!-- lazy 로딩이란 이미지 태그가 뷰안에 위치하게 되었을때 load 하는 것을 의미한다. eager 페이지의 위치에 관계없이 리소스를 즉시 로드한다.  -->
+            <!-- no-referrer-when-downgrade 대상주소가 http 일때만 전송한다.
+            strict-origin-when-cross-origin 대상 주소의 도메인이 같을 경우 전송. 
+            unsafe-url 무조건 그냥 다 전송하기. -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1122.5362999641413!2d127.0136957894005!3d37.271139709701536!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b43394e46887f%3A0x8d75edd3473ea43b!2z7IiY7JuQ7Ya16riw7YOAIOuupOymiOyVheq4sA!5e0!3m2!1sko!2skr!4v1679496408295!5m2!1sko!2skr" width="800" height="400" style="border:none;" allowfullscreen="" loading="lazy" referrerpolicy="unsafe-url"></iframe>
+        </div>
+        
+    </div>   
+    
+    
+
+
+
 
 
 
