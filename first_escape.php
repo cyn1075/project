@@ -8,10 +8,13 @@
 <body>
     <div id="board_area">
         <h1 style="text-align: center;"> Tempo Rubato </h1>
-        <img src = "1.webp" width="800" height="400">
-            <p style="text-align: center">어느날 아침,<br>
-               집 앞에 작은 상자가 하나 놓여 있었다.<br>
-               <br>
+        <img src = "1.jpg" width="800" height="400">
+            <p style="text-align: center">나는 마을의 열쇠공이다.<br>
+            옆집 귀금속점 주인이 일전에 의뢰한 물건이 맘에 쏙 들었는지 귀한 답례품을 주고 갔다.<br>
+            흠 근데 이거 뭘 준거지?<br>
+            구두쇠 녀석이 비싼 걸 줬을 리 없으니 의심부터 해봐야겠어!<br>
+            자, 어디한번 보러 가볼까?<br><br>
+               난이도 : ★★★★★  // 제한 시간 : 60:00<br><br></p>
         <h4> 방탈출 후기를 남겨주세요.</h4>
         <table class="list-table">
             <thead>
