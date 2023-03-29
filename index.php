@@ -95,7 +95,6 @@
             <p>Bob의 방탈출 카페 홈페이지에 오신 여러분들을 환영합니다.<br>
                여러가지 테마의 방탈출을 60분 내에 성공해보세요. <br>
                동료들과 함께 다 같이 머리를 맞대고 협동을 통해 문제 해결의 희열을 맞보세요.<br>
-               
 
             </p>
         </div>
@@ -151,7 +150,32 @@
     
 
 
+    <script>
+    const menu1 = document.getElementById('menu1');
+    const menu2 = document.getElementById('menu2');
+    const menu3 = document.getElementById('menu3');
+    const menu4 = document.getElementById('menu4');
 
+    const section1 = document.getElementById('logo');
+    const section2 = document.getElementById('container');
+    const section3 = document.getElementById('reservation');
+    const section4 = document.getElementById('map');
+
+    menu1.addEventListener('click', () => {
+        window.scrollBy({top: section1.getBoundingClientRect().top, behavior: 'smooth'});
+    });
+    menu2.addEventListener('click', () => {
+        window.scrollBy({top: section2.getBoundingClientRect().top, behavior: 'smooth'});
+    });
+    menu3.addEventListener('click', () => {
+        window.scrollBy({top: section3.getBoundingClientRect().top, behavior: 'smooth'});
+    });
+    menu4.addEventListener('click', () => {
+        window.scrollBy({top: section4.getBoundingClientRect().top, behavior: 'smooth'});
+    });
+    
+
+</script>
 
 
 
