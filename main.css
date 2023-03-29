@@ -12,8 +12,6 @@
     /* 그럼 바텀은 아래쪽에 영역을 준다. 라는 의미일듯? */
     margin-top: 10px; margin-bottom: 10px; top: 0; left: 0;
     position: sticky;
-    position: relative;
-    z-index: 2;
 }
 
 .menu ul{
@@ -66,7 +64,7 @@
     width: 100%;
     /* width 너비인데 %는 부모의 영향을 받는다.  */
     
-    height: 10vh;
+    height: 20vh;
     /* height는 높이, vh는 열려있는 화면의 상대길이이기 때문에 스크롤바를 포함한 길이를 반환한다. */
 }
 
@@ -93,7 +91,6 @@ html, body {
   /* #이 id로 지정된 친구를 지칭하는 뜻 */
 #page{
     min-height: 100%;
-    position: relative;
     padding-bottom: 60px;
 }
   
