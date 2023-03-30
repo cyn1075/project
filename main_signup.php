@@ -19,7 +19,7 @@
         <div class="mb-3 ">
                 <label for="name" class="form-label">아이디</label>
                 <input type="name" name="name" class="form-control" id="name" placeholder="아이디를 입력해 주세요.">
-                <button type="button" id="" class="btn btn-primary mb-3" style="margin-left: 350px; margin-bottom: 100px;">중복확인</button>
+                <button type="button" id="check" class="btn btn-primary mb-3" style="margin-left: 350px; margin-bottom: 100px;">중복확인</button>
             </div>
             <div class="mb-3 ">
                 <label for="password" class="form-label">비밀번호</label>
@@ -48,6 +48,43 @@
                 alert("비밀번호가 서로 일치하지 않습니다");
             }
         });
+    </script>
+
+
+
+
+
+    <script>
+        const check = document.querySelector("#check");
+        check.addEventListener("click", function(e) {
+
+            <?php
+            require_once('/db_main.php');
+$userid = $_GET['name'];
+
+if(!$id){
+    echo "<script>
+    alert('아이디를 입력해 주세요.');
+    history.back();</script>";
+}else{
+    $sql = $db -> prepare("SELECT * FROM main_user WHERE id = :userid");
+    $sql -> bindParam(':userid', $userid);
+    $sql -> execute();
+    $count = $sql -> rowCount();
+
+    if($count<1){
+        echo "<script>
+    alert('사용 가능한 아이디 입니다.');
+    history.back();</script>";
+    }else{
+        echo "<script>
+    alert('이미 사용중인 아이디 입니다.');
+    history.back();</script>";
+    }
+
+}
+?>
+     });
     </script>
 </body>
 
