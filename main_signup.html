@@ -20,7 +20,7 @@
 </head>
 
 <body>
-    <form action="db_main.php" method="POST">
+    <form action="db_main.php" action="checkid.php" method="POST">
         <div class="w-50 ml-auto mr-auto mt-5">
         <div class="title"><h1 style="font-size: 21px;">회원가입</h1></div>
         <div class="mb-3 ">
@@ -47,7 +47,7 @@
         const password = document.querySelector("#password");
         const passwordCheck = document.querySelector("#password-check");
         signupButton.addEventListener("click", function(e) {
-            if(password.value&& password.value === passwordCheck.value){
+            if(password.value && password.value === passwordCheck.value){
                 
             signupForm.submit();
             location.href ="db_main.php"

@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <form action="db_main.php" method="POST">
+    <form action="db_main.php" action="checkid.php" method="POST">
         <div class="w-50 ml-auto mr-auto mt-5">
         <div class="title"><h1 style="font-size: 21px;">회원가입</h1></div>
         <div class="mb-3 ">
@@ -50,40 +50,12 @@
         });
     </script>
 
-
-
-
-
     <script>
         const check = document.querySelector("#check");
         check.addEventListener("click", function(e) {
+            
+            location.href = "checkid.php"
 
-            <?php
-            require_once('/db_main.php');
-$userid = $_GET['name'];
-
-if(!$id){
-    echo "<script>
-    alert('아이디를 입력해 주세요.');
-    history.back();</script>";
-}else{
-    $sql = $db -> prepare("SELECT * FROM main_user WHERE id = :userid");
-    $sql -> bindParam(':userid', $userid);
-    $sql -> execute();
-    $count = $sql -> rowCount();
-
-    if($count<1){
-        echo "<script>
-    alert('사용 가능한 아이디 입니다.');
-    history.back();</script>";
-    }else{
-        echo "<script>
-    alert('이미 사용중인 아이디 입니다.');
-    history.back();</script>";
-    }
-
-}
-?>
      });
     </script>
 </body>
