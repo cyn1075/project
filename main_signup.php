@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <form action="db_main.php" action="checkid.php" method="POST">
+    <form action="db_main.php" method="POST">
         <div class="w-50 ml-auto mr-auto mt-5">
         <div class="title"><h1 style="font-size: 21px;">회원가입</h1></div>
         <div class="mb-3 ">
@@ -51,10 +51,19 @@
     </script>
 
     <script>
+         function submit2(frm) { 
+    frm.action='checkid.php'; 
+    frm.submit(); 
+    return true; 
+  } 
+    </script>
+
+
+    <script>
         const check = document.querySelector("#check");
         check.addEventListener("click", function(e) {
             
-            location.href = "checkid.php"
+            return submit2(this.form);
 
      });
     </script>

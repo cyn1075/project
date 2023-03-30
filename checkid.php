@@ -7,7 +7,7 @@ $userid = $_POST['name'];
 
 if(!$userid){
     echo "<script>
-    alert('$userid', '1');
+    alert('아이디를 입력해 주세요.');
     history.back();</script>";
 }else{
     $sql = $db -> prepare("SELECT * FROM main_user WHERE id = :userid");
