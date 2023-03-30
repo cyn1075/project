@@ -5,7 +5,7 @@ $db = new mysqli('13.124.103.127', 'choi', 'choichoi', 'mysql');
 
 $userid = $_GET['name'];
 
-if(!$id){
+if(!$userid){
     echo "<script>
     alert('아이디를 입력해 주세요.');
     history.back();</script>";
