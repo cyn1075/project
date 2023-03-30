@@ -1,5 +1,8 @@
 <?php
-require_once('/db_main.php');
+
+$db = new mysqli('13.124.103.127', 'choi', 'choichoi', 'mysql'); 
+
+
 $userid = $_GET['name'];
 
 if(!$id){
