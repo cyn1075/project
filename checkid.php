@@ -3,7 +3,7 @@
 $db = new mysqli('13.124.103.127', 'choi', 'choichoi', 'mysql'); 
 
 
-$userid = $_GET['name'];
+$userid = $_POST['name'];
 
 if(!$userid){
     echo "<script>
