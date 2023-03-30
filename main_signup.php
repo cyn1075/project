@@ -19,6 +19,7 @@
         <div class="mb-3 ">
                 <label for="name" class="form-label">아이디</label>
                 <input type="name" name="name" class="form-control" id="name" placeholder="아이디를 입력해 주세요.">
+                <button type="button" id="" class="btn btn-primary mb-3" style="margin-left: 350px; margin-bottom: 100px;">중복확인</button>
             </div>
             <div class="mb-3 ">
                 <label for="password" class="form-label">비밀번호</label>
