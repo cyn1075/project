@@ -6,7 +6,7 @@
     <link rel="stylesheet" type="text/css" href="first.css"/>
 </head>
 <body>
-    <div id="board_area" style="text-align: cecenter">
+    <div id="board_area" style="text-align: center">
         <h1> 열쇠공의 이중생활 </h1>
         <img src = "1.jpg" width="800" height="400">
         <p>나는 마을의 열쇠공이다.<br>
