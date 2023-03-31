@@ -27,7 +27,7 @@
         <div class="mb-3 ">
                 <label for="name" class="form-label">아이디</label>
                 <input type="name" name="name" class="form-control" id="name" placeholder="아이디를 입력해 주세요.">
-                <input type="button" id="check" class="btn btn-primary mb-3" style="margin-left: 350px; margin-bottom: 100px;" onclick='return submit2(this.form);' value='중복확인'>
+                <input type="button" id="check" class="btn btn-primary mb-3" style="margin-left: 350px; margin-bottom: 100px;" value='중복확인'>
             </div>
             <div class="mb-3 ">
                 <label for="password" class="form-label">비밀번호</label>
@@ -61,14 +61,14 @@
    
 
 
-    <!-- <script>
+    <script>
         const check = document.querySelector("#check");
         check.addEventListener("click", function(e) {
             
             return submit2(this.form);
 
      });
-    </script> -->
+    </script>
 </body>
 
 </html>
