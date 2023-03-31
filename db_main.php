@@ -21,6 +21,8 @@ if($pw != $pwchk){
     echo 1;
     $sql2 = "SELECT * FROM main_user WHERE id='$id'";
     $result = $mysqli->query($sql2);
+    $data = mysqli_fetch_assoc($result);
+    echo $data['id'];
     echo 2;
     
 
