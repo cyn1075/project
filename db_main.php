@@ -21,7 +21,7 @@ $result = mysqli_query($con, $sql);
 if($pw != $pwchk){
     echo "<script>
     alert('비밀번호가 일치하지 않습니다.');
-    location.href='index.php';</script>";
+    history.back();</script>";
 }else if(!$id){
     echo "<script>
     alert('아이디를 입력해 주세요.');
@@ -35,7 +35,7 @@ if($pw != $pwchk){
     } else {
         echo "<script>
     alert('회원가입 됐습니다.');
-    history.back();</script>";
+    location.href='index.php';</script>";
     }
     
     $mysqli->close();
