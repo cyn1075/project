@@ -26,8 +26,9 @@ if($pw != $pwchk){
     echo "<script>
     alert('아이디를 입력해 주세요.');
     history.back();</script>";
-}else if($id){$sql = "SELECT * FROM main_user WHERE id='$id'";
-    $result = $mysqli->query($sql);
+}else if(isset($id)){
+    $sql2 = "SELECT * FROM main_user WHERE id='$id'";
+    $result = $mysqli->query($sql2);
     if ($result->num_rows > 0) {
         echo "<script>
         alert('이미 사용중인 아이디 입니다.');
@@ -36,7 +37,6 @@ if($pw != $pwchk){
         echo "<script>
     alert('회원가입 됐습니다.');
     location.href='index.php';</script>";
-    $result = mysqli_query($con, $sql);
     }
     
     $mysqli->close();
