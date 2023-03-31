@@ -26,7 +26,7 @@ if($pw != $pwchk){
     echo "<script>
     alert('아이디를 입력해 주세요.');
     history.back();</script>";
-}else{$sql = "SELECT * FROM main_user WHERE id='$username'";
+}else if($id){$sql = "SELECT * FROM main_user WHERE id='$id'";
     $result = $mysqli->query($sql);
     if ($result->num_rows > 0) {
         echo "<script>
