@@ -18,12 +18,21 @@ if($pw != $pwchk){
     alert('아이디를 입력해 주세요.');
     history.back();</script>";
 }else if(isset($id)){
-    echo 1;
     $sql2 = "SELECT * FROM main_user WHERE id='$id'";
-    $result = $mysqli->query($sql2);
+    $result = $con->query($sql2);
     $data = mysqli_fetch_assoc($result);
-    echo $data['id'];
-    echo 2;
+   
+if ($result->num_rows > 0) {
+    echo "<script>
+    alert('이미 사용중인 아이디 입니다.');
+    history.back();</script>";
+} else {
+    echo "<script>
+alert('회원가입 됐습니다.'); 
+location.href='index.php';</script>";
+$sql = "INSERT INTO main_user (id, pw) VALUES('$id', '{$_POST['password']}')";
+$result = mysqli_query($con, $sql);
+}
     
 
     
