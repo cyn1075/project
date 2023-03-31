@@ -26,7 +26,7 @@
             </div>
             <div class="mb-3 ">
                 <label for="passwordCheck" class="form-label">비밀번호 체크</label>
-                <input type="password" class="form-control" id="password-check" placeholder="비밀번호를 다시 입력해 주세요.">
+                <input name="password-check" type="password" class="form-control" id="password-check" placeholder="비밀번호를 다시 입력해 주세요.">
             </div>
 
             <button type="submit" id="signup-button" class="btn btn-primary mb-3" >회원가입</button>
