@@ -14,18 +14,34 @@ $sql = "INSERT INTO main_user (id, pw) VALUES('$id', '{$_POST['password']}')";
 
 
 
+
+
 $result = mysqli_query($con, $sql);
 
-if($pw === $pwchk){
+if($pw != $pwchk){
     echo "<script>
-    alert('회원가입 됐습니다.');
+    alert('비밀번호가 일치하지 않습니다.');
     location.href='index.php';</script>";
-}
-else{
+}else if(!$id){
     echo "<script>
-    alert('회원가입에 실패했습니다.');
+    alert('아이디를 입력해 주세요.');
     history.back();</script>";
-}
+}else{$sql = "SELECT * FROM main_user WHERE id='$username'";
+    $result = $mysqli->query($sql);
+    if ($result->num_rows > 0) {
+        echo "<script>
+        alert('이미 사용중인 아이디 입니다.');
+        history.back();</script>";
+    } else {
+        echo "<script>
+    alert('회원가입 됐습니다.');
+    history.back();</script>";
+    }
+    
+    $mysqli->close();
+    
+    }
+    
  
 $sql = 'SELECT VERSION()';
 $result = mysqli_query($con, $sql);
