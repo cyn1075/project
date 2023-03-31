@@ -36,6 +36,7 @@ if($pw != $pwchk){
         echo "<script>
     alert('회원가입 됐습니다.');
     location.href='index.php';</script>";
+    $result = mysqli_query($con, $sql);
     }
     
     $mysqli->close();
