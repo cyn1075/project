@@ -1,9 +1,6 @@
 <?php
 
-
-
 $con = mysqli_connect('13.124.103.127', 'choi', 'choichoi', 'mysql','3306');
-
 
 $id = $_POST['name'];
 $pw = $_POST['password'];
@@ -11,11 +8,6 @@ $pwchk = $_POST['password-check'];
 
 
 $sql = "INSERT INTO main_user (id, pw) VALUES('$id', '{$_POST['password']}')";
-
-
-
-
-
 $result = mysqli_query($con, $sql);
 
 if($pw != $pwchk){
@@ -28,7 +20,7 @@ if($pw != $pwchk){
     history.back();</script>";
 }else if(isset($id)){
     $sql2 = "SELECT * FROM main_user WHERE id='$id'";
-    $result = $mysqli->query($sql2);
+    $result2 = $mysqli->query($sql2);
     if ($result->num_rows > 0) {
         echo "<script>
         alert('이미 사용중인 아이디 입니다.');
@@ -36,12 +28,10 @@ if($pw != $pwchk){
     } else {
         echo "<script>
     alert('회원가입 됐습니다.');
+    
     location.href='index.php';</script>";
     }
-    
-    $mysqli->close();
-    
-    }
+}
     
  
 $sql = 'SELECT VERSION()';
