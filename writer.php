@@ -15,7 +15,7 @@
                     </div>
                     <div class="wi_line"></div>
                     <div id="in_name">
-                        <h4>작성자</h4>
+                        <h2>작성자</h2>
                         <!-- <textarea name="name" id="uname" rows="1" cols="55" placeholder="글쓴이" maxlength="100" required></textarea> -->
                         <b> <?php session_start(); echo $_SESSION['userid']; ?></b>
                     </div>
