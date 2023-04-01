@@ -15,7 +15,8 @@
                     </div>
                     <div class="wi_line"></div>
                     <div id="in_name">
-                        <textarea name="name" id="uname" rows="1" cols="55" placeholder="<?php session_start(); echo $_SESSION['userid']; ?>" maxlength="100" required></textarea>
+                        <h4>작성자</h4>
+                        <!-- <textarea name="name" id="uname" rows="1" cols="55" placeholder="글쓴이" maxlength="100" required></textarea> -->
                         <b> <?php session_start(); echo $_SESSION['userid']; ?></b>
                     </div>
                     <div class="wi_line"></div>
