@@ -23,7 +23,7 @@
 
 
 .read_table {
-	border: 1px solid #444444;
+	border: 1px solid white;
 	margin-top: 30px;
 }
 
@@ -32,7 +32,7 @@
 	font-size: 23.5px;
 	text-align: center;
 	background-color: #3C3C3C;
-	color: white;
+	color: black;
 	width: 1000px;
 }
 
@@ -86,13 +86,19 @@
 }
 
 .bo_ser {
-	font-size:14px;
+	/* font-size:14px;
 	color:#333;
 	position: absolute;
-	right: 0;
+	right: 0; */
+
+	width: 700px;
+	height: 200px;
+	text-align: center;
+	margin: auto;
+	margin-top: 50px;
 }
 .bo_ser > ul > li {
-	float:left;
+	/* float:left; */
 	margin-left:10px;
 }
 

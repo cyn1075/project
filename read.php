@@ -27,9 +27,7 @@ include $_SERVER['DOCUMENT_ROOT']."/db.php";
 		<td class="read_id2"><?php echo $board['name']; ?> </td>
 		<td class="read_hit">조회수</td>
 		<td class="read_hit2"><?php echo $board['hit']; ?></td>
-		<td class="read_date">작성일자</td>
-		<td class="read_date"><?php echo $board['date']; ?></td>
-		
+	
 	</tr>
 
 	<tr>
