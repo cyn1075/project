@@ -18,8 +18,11 @@ include $_SERVER['DOCUMENT_ROOT']."/db.php";
 		$board = $sql->fetch_array();
 	?>
 <div id="board_read">
+	<h2>후기 제목</h2><br>
 	<h2><?php echo $board['title']; ?></h2>
+	<div id="bo_line"></div>
 		<div id="user_info">
+			<h2>작성자</h2>
 			<?php echo $board['name']; ?> 
 			<?php echo $board['date']; ?> 조회:<?php echo $board['hit']; ?>
 				<div id="bo_line"></div>

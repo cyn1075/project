@@ -2,6 +2,7 @@
 	width:900px;
 	position: relative;
 	word-break:break-all;
+	text-align: center;
 }
 #user_info {
 	font-size:14px;
