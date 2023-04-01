@@ -18,10 +18,17 @@ include $_SERVER['DOCUMENT_ROOT']."/db.php";
 		$board = $sql->fetch_array();
 	?>
 <div id="board_read">
+
+            <tr>
+                <td style="height:40; float:center; background-color:#3C3C3C">
+                    <p style="font-size:25px; text-align:center; color:white; margin-top:15px; margin-bottom:15px"><b>리뷰 보기</b></p>
+                </td>
+            </tr>
+
 	<h2>후기 제목</h2><br>
 	<?php echo $board['title']; ?>
 	<div style="text-align : right;">
-	작성일자:<?php echo $board['date']; ?> 조회:<?php echo $board['hit']; ?>
+	작성일자:<?php echo $board['date']; ?>// 조회:<?php echo $board['hit']; ?>
     </div>
 	<div id="bo_line"></div>
 		<div id="user_info">
