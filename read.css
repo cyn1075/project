@@ -30,3 +30,14 @@
 	float:left;
 	margin-left:10px;
 }
+
+#content {
+	margin-top:10px;
+}
+#content p {
+	font:14px;
+	color:#333;
+	width: 900px;
+	height: 400px;
+	resize: none;
+}

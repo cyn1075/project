@@ -19,7 +19,7 @@ include $_SERVER['DOCUMENT_ROOT']."/db.php";
 	?>
 <div id="board_read">
 	<h2>후기 제목</h2><br>
-	<h2><?php echo $board['title']; ?></h2>
+	<?php echo $board['title']; ?>
 	<div id="bo_line"></div>
 		<div id="user_info">
 			<h2>작성자</h2>
@@ -27,8 +27,8 @@ include $_SERVER['DOCUMENT_ROOT']."/db.php";
 			<?php echo $board['date']; ?> 조회:<?php echo $board['hit']; ?>
 				<div id="bo_line"></div>
 			</div>
-			<div id="bo_content">
-				<?php echo nl2br("$board[content]"); ?>
+			<div id="content">
+				<p><?php echo nl2br("$board[content]"); ?></p>
 			</div>
 	<div id="bo_ser">
 <?php 
