@@ -33,8 +33,9 @@ include $_SERVER['DOCUMENT_ROOT']."/db.php";
 	</tr>
 
 	<tr>
-		<td colspan="4" class="read_content" valign="top"></td>
+		<td colspan="4" class="read_content" valign="top">
 		<?php echo nl2br("$board[content]"); ?>
+		</td>
 	</tr>
 
 </table>
