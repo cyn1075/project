@@ -3,7 +3,22 @@ const sendit = () => {
     const pw = document.getElementById("password");
 
 
+
+    if(name.value == ""){
+        alert("아이디를 입력하세요.");
+        name.focus();
+        return false;
+    //     /focus(): 커서가 깜빡이는 현상, blur(): 커서가 사라지는 현상
+    // return false; return: 반환하다 return false:  아무것도 반환하지 말아라 아래 코드부터 아무것도 진행하지 말것
+    }
     
+
+    if(pw.value == ""){
+        alert("비밀번호를 입력하세요.");
+        return false;
+    }
+
+
     if(name.value.length < 4 || name.value.length > 6){
         alert("아이디는 4자 이상 6자 이하로 입력해주세요.");
         name.focus();

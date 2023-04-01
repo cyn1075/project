@@ -19,11 +19,11 @@
         <div class="title"><h1 style="font-size: 21px;">회원가입</h1></div>
         <div class="mb-3 ">
                 <label for="name" class="form-label">아이디</label>
-                <input type="name" name="name" class="form-control" id="name" placeholder="아이디를 입력해 주세요.">
+                <input type="name" name="name" class="form-control" id="name" placeholder="아이디는 4자 이상 6자 이하로 작성해주세요.">
             </div>
             <div class="mb-3 ">
-                <label for="password" class="form-label"> 비밀번호 영문자+숫자+특수문자조합 10~20자리</label>
-                <input name="password" type="password" class="form-control" id="password" placeholder="비밀번호를 입력해 주세요.">
+                <label for="password" class="form-label"> 비밀번호 </label>
+                <input name="password" type="password" class="form-control" id="password" placeholder="영문자+숫자+특수문자조합 10~20자리로 작성해 주세요.">
             </div>
             <div class="mb-3 ">
                 <label for="passwordCheck" class="form-label">비밀번호 체크</label>
