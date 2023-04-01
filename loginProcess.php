@@ -22,7 +22,6 @@ if (mysqli_num_rows($result) == 1) {
 
 <script>
     location.replace("index.php");
-    location.replace("writer.php");
 </script>
 
 <?php
