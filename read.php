@@ -48,12 +48,12 @@ if($_SESSION['userid'] == $board['name']){
 	
 
 
-
+<!-- 
 		<ul>
 			<li><a href="first_escape.php">[목록으로]</a></li>
 			<li><a href="modify.php?idx=<?php echo $board['idx']; ?>">[수정]</a></li>
 			<li><a href="delete.php?idx=<?php echo $board['idx']; ?>">[삭제]</a></li>
-		</ul>
+		</ul> -->
 	
 		</div>
 
