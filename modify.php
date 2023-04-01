@@ -30,9 +30,9 @@ $board = $sql->fetch_array();
                     <div id="in_content">
                         <textarea name="content" id="ucontent" placeholder="내용" required><?php echo $board['content']; ?></textarea>
                     </div>
-                    <div id="in_pw">
+                    <!-- <div id="in_pw">
                         <input type="password" name="pw" id="upw"  placeholder="비밀번호" required />  
-                    </div>
+                    </div> -->
                     <div class="bt_se">
                         <button type="submit">글 수정 완료</button>
                     </div>

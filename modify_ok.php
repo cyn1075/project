@@ -7,12 +7,12 @@ session_start();
 
 $bno =$_GET['idx'];
 // $username =$_POST['name'];
-$userpw = $_POST['pw'];
+// $userpw = $_POST['pw'];
 $title = $_POST['title'];
 $content = $_POST['content'];
 
 
-$sql = "update board set name='$username', pw='$userpw', title='$title',content='$content' where idx='".$bno."'";
+$sql = "update board set name='$username', pw='1', title='$title',content='$content' where idx='".$bno."'";
 
 $result = mysqli_query($db, $sql);
 
