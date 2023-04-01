@@ -35,6 +35,7 @@
 
 
 <body onload="javascript:openPopup('popup.php')">
+<form>
     <div id="page">
 
         <header>
@@ -187,7 +188,7 @@
         Tel : 010 - 9774 - 1838
     </footer>
 
-
+</form>
 </body>
 
 

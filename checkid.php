@@ -10,7 +10,7 @@ if(!$userid){
     alert('아이디를 입력해 주세요.');
     history.back();</script>";
 }else{
-    $sql = "SELECT * FROM main_user WHERE id='$username'";
+    $sql = "SELECT * FROM main_user WHERE id='$userid'";
 $result = $mysqli->query($sql);
 
 // 결과가 있으면 아이디 중복, 없으면 아이디 사용 가능
@@ -33,3 +33,5 @@ $mysqli->close();
 
 
 ?>
+
+

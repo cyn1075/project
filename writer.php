@@ -16,6 +16,7 @@
                     <div class="wi_line"></div>
                     <div id="in_name">
                         <textarea name="name" id="uname" rows="1" cols="55" placeholder="글쓴이" maxlength="100" required></textarea>
+                        <b> <?php echo $_SESSION['userid']; ?></b>님 반갑습니다.
                     </div>
                     <div class="wi_line"></div>
                     <div id="in_content">
