@@ -17,30 +17,29 @@ include $_SERVER['DOCUMENT_ROOT']."/db.php";
 		$sql = mq("select * from board where idx='".$bno."'");
 		$board = $sql->fetch_array();
 	?>
-<div id="board_read">
 
-            <tr>
-                <td style="height:40; float:center; background-color:#3C3C3C">
-                    <p style="font-size:25px; text-align:center; color:white; margin-top:15px; margin-bottom:15px"><b>리뷰 보기</b></p>
-                </td>
-            </tr>
+<table class="read_table">
+	<tr>
+		<td colspan="4" class="read_title"><?php echo $board['title']; ?></td>
+	</tr>
+	<tr>
+		<td class="read_id">작성자</td>
+		<td class="read_id2"><?php echo $board['name']; ?> </td>
+		<td class="read_hit">조회수</td>
+		<td class="read_hit2"><?php echo $board['hit']; ?></td>
+		<td class="read_date">작성일자</td>
+		<td class="read_date"><?php echo $board['date']; ?></td>
+		
+	</tr>
 
-	<h2>후기 제목</h2><br>
-	<?php echo $board['title']; ?>
-	<div style="text-align : right;">
-	작성일자:<?php echo $board['date']; ?>// 조회:<?php echo $board['hit']; ?>
-    </div>
-	<div id="bo_line"></div>
-		<div id="user_info">
-			<h2>작성자</h2>
-			<?php echo $board['name']; ?> 
-				<div id="bo_line"></div>
-			</div>
-			<div id="content">
-				<h2>후기 내용</h2>
-				<p><?php echo nl2br("$board[content]"); ?></p>
-			</div>
-	<div id="bo_ser">
+	<tr>
+		<td colspan="4" class="read_content" valign="top"></td>
+		<?php echo nl2br("$board[content]"); ?>
+	</tr>
+
+</table>
+
+<div class="bo_ser">
 <?php 
 session_start();
 if($_SESSION['userid'] == $board['name']){
@@ -58,19 +57,15 @@ if($_SESSION['userid'] == $board['name']){
 	</ul>
 <?php }
 ?>
-	
+</div>
 
 
-<!-- 
-		<ul>
-			<li><a href="first_escape.php">[목록으로]</a></li>
-			<li><a href="modify.php?idx=<?php echo $board['idx']; ?>">[수정]</a></li>
-			<li><a href="delete.php?idx=<?php echo $board['idx']; ?>">[삭제]</a></li>
-		</ul> -->
-	
-		</div>
+
+
+
+
 
 		
-</div>
+
 </body>
 </html>
