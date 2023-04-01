@@ -8,8 +8,11 @@ $pwchk = $_POST['password-check'];
 
 
 
-
-if(isset($id)){
+if($pw != $pwchk){
+    echo "<script>
+    alert('비밀번호가 일치하지 않습니다.');
+    history.back();</script>";
+}else if(isset($id)){
     $sql2 = "SELECT * FROM main_user WHERE id='$id'";
     $result = $con->query($sql2);
     $data = mysqli_fetch_assoc($result);
