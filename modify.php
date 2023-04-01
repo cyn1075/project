@@ -22,7 +22,9 @@ $board = $sql->fetch_array();
                     </div>
                     <div class="wi_line"></div>
                     <div id="in_name">
-                        <textarea name="name" id="uname" rows="1" cols="55" placeholder="글쓴이" maxlength="100" required><?php echo $board['name']; ?></textarea>
+                        <!-- <textarea name="name" id="uname" rows="1" cols="55" placeholder="글쓴이" maxlength="100" required><?php echo $board['name']; ?></textarea> -->
+                        <h2>작성자</h2>
+                        <b> <?php session_start(); echo $_SESSION['userid']; ?></b>
                     </div>
                     <div class="wi_line"></div>
                     <div id="in_content">

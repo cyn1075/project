@@ -1,8 +1,12 @@
 <?php
 $db = mysqli_connect('13.124.103.127', 'choi', 'choichoi', 'mysql');
 
+session_start();
+ $username = $_SESSION['userid']; 
+
+
 $bno =$_GET['idx'];
-$username =$_POST['name'];
+// $username =$_POST['name'];
 $userpw = $_POST['pw'];
 $title = $_POST['title'];
 $content = $_POST['content'];
