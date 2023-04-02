@@ -46,3 +46,9 @@ if($_SESSION['userid'] == $board['name']){
 		</div>
 
         </div>
+
+
+
+        <td class="read_date">작성일자</td>
+		<td class="read_date"><?php echo $board['date']; ?></td>
+		

@@ -100,6 +100,7 @@
             </p>
         </div>
 
+        <div id="container1"></div><br><br><br>
         <div id= "container">
             <h1> 방탈출 리스트 </h1>
             <div class="gallery">
@@ -158,7 +159,7 @@
       const menu4 = document.getElementById('menu4');
 
       const section1 = document.getElementById('logo');
-      const section2 = document.getElementById('container');
+      const section2 = document.getElementById('container1');
       const section3 = document.getElementById('reservation');
       const section4 = document.getElementById('map');
 
