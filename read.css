@@ -20,13 +20,13 @@
 #bo_content {
 	margin-top:20px;
 } */
-*{
-	text-align: center;
-}
+
 
 .read_table {
 	border: 1px solid #444444;
 	margin-top: 30px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .read_title {
