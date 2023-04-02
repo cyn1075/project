@@ -92,15 +92,17 @@
 	position: absolute;
 	right: 0; */
 
-	width: 700px;
+	/* width: 700px;
 	height: 200px;
-	/* text-align: center; */
+	text-align: center;
 	margin: auto;
-	margin-top: 50px;
+	margin-top: 50px; */
 }
 #ul_list{
 text-align: right;
 list-style: none;
+margin: 10px;
+padding: 0%;
 }
 
 .bo_ser > ul > li {
@@ -111,6 +113,7 @@ list-style: none;
 	height: 50px;
 	width: 100px;
 	font-size: 20px;
+	margin: 3px;
 	
 }
 
