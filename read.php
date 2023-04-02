@@ -51,7 +51,7 @@ if($_SESSION['userid'] == $board['name']){
 
 <?php }else{
 	?>
-	<ul>
+	<ul id ="ul_list">
 	<li><a href="first_escape.php">[목록으로]</a></li>
 	</ul>
 <?php }
