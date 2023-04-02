@@ -107,6 +107,7 @@ list-style: none;
 	
 	/* margin-left:10px; */
 
+	display: inline;
 	height: 50px;
 	width: 100px;
 	font-size: 20px;
