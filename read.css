@@ -98,8 +98,13 @@
 	margin: auto;
 	margin-top: 50px;
 }
+#ul_list{
+text-align: right;
+list-style: none;
+}
+
 .bo_ser > ul > li {
-	float:right;
+	
 	/* margin-left:10px; */
 
 	height: 50px;
