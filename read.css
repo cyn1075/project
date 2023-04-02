@@ -20,7 +20,9 @@
 #bo_content {
 	margin-top:20px;
 } */
-
+*{
+	text-align: center;
+}
 
 .read_table {
 	border: 1px solid #444444;
