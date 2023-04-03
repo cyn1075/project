@@ -132,8 +132,54 @@
                 <img src="6.jpg">
                 <div class="desc">서비스 준비중 입니다.</div>
             </div>
-        </div>
+        </div><br><br>
 
+
+
+        <div id="reservation">
+        <h1>예약 하기</h1>
+		<label for="name">아이디</label>
+		<b> <?php session_start(); echo $_SESSION['userid']; ?></b>
+
+		<label for="phone">전화번호</label>
+		<input type="tel" id="phone" name="phone" required>
+
+		<label for="menu">방탈출 리스트</label>
+		<select id="menu" name="menu">
+            <option value="">방탈출을 선택해 주세요.</option>
+			<option value="A">열쇠공의 이중생활</option>
+			<option value="B">미씽</option>
+			<option value="C">운명</option>
+			<option value="D">전래동 살인사건</option>
+			<option value="E">디어 마르시</option>
+		</select>
+
+		<label for="date">예약 날짜</label>
+		<input type="date" id="date" name="date" required>
+
+		<label for="time">예약 시간</label>
+		<select id="time" name="time">
+			<option value="13:00">13:00</option>
+			<option value="14:00">14:00</option>
+			<option value="15:00">15:00</option>
+			<option value="16:00">16:00</option>
+			<option value="17:00">17:00</option>
+			<option value="18:00">18:00</option>
+			<option value="19:00">19:00</option>
+			<option value="20:00">20:00</option>
+		</select> 
+        	<label for="num_people">인원 수</label>
+        <select id="num_people" name="num_people" required>			
+            <option value="">인원 수를 선택하세요</option>			
+            <option value="1">1명</option>			
+            <option value="2">2명</option>			
+            <option value="3">3명</option>			
+            <option value="4">4명</option>		
+        </select>
+        
+	<input type="submit" value="예약하기">	
+
+        </div>
        
 
         <div id = "map">
