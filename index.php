@@ -90,6 +90,7 @@
             </ul>
         </nav>
 
+        <div id="popularity1"></div><br><br>
         <div class = "popularity">
             <h1>Bob 방탈출 소개</h1>
             <img src = "main_image.jpg" width="800" height="400">
@@ -179,7 +180,7 @@
         
 	<input type="submit" value="예약하기">	
 
-        </div>
+        </div><br><br><br>
        
 
         <div id = "map">
