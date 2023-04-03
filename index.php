@@ -134,12 +134,12 @@
             </div>
         </div><br><br>
 
-        <div id="reservation1"></div><br><br>
+        <div id="reservation1"> <h1>예약 하기</h1> </div><br><br>
 
-        <h1 >예약 하기</h1>
+        
         <div id="reservation">
 		<label for="name">아이디</label><br>
-		<label for="name"> <?php session_start(); echo $_SESSION['userid']; ?></label>
+		<a> <?php session_start(); echo $_SESSION['userid']; ?></a>
 
 		<label for="phone">전화번호</label>
 		<input type="tel" id="phone" name="phone" required>
