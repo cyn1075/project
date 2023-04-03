@@ -135,11 +135,10 @@
         </div><br><br>
 
 
-
+        <h1 >예약 하기</h1>
         <div id="reservation">
-        <h1>예약 하기</h1>
 		<label for="name">아이디</label>
-		<b> <?php session_start(); echo $_SESSION['userid']; ?></b>
+		<label> <?php session_start(); echo $_SESSION['userid']; ?></label>
 
 		<label for="phone">전화번호</label>
 		<input type="tel" id="phone" name="phone" required>
