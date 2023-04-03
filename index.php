@@ -90,7 +90,7 @@
             </ul>
         </nav>
 
-        <div id="popularity1"></div><br><br>
+        <div id="popularity1"></div><br><br><br>
         <div class = "popularity">
             <h1>Bob 방탈출 소개</h1>
             <img src = "main_image.jpg" width="800" height="400">
@@ -177,6 +177,19 @@
             <option value="3">3명</option>			
             <option value="4">4명</option>		
         </select>
+        <div id="caution">
+            <p>주의사항 <br>
+
+
+* 원활한 진행을 위해 10분전 매장 방문을 부탁드립니다.(매장 도착이 늦어지실 경우 시간이 차감되어 진행될 수 있습니다.)<br>
+* 결제는 방문 후에 현장에서 진행됩니다.<br>
+* 음주자는 이용에 제한이 있을 수 있습니다.<br>
+* 매장에서 예약 확인을 위해 전화를 드릴 수 있습니다.3회 이상 전화를 받지 않으실 경우 예약이 취소될 수 있으니 이 점 유의 부탁드립니다.<br>
+<br>
+예약 시 예약자뿐만 아니라 동행하시는 모든 분들은 위 내용에 대해 이해하고 동의했다고 간주되며,<br>
+이를 위반하여 발생하는 모든 문제에 대해 매장에서는 책임을 지지 않습니다.            </p>
+        </div>
+
         
 	<input type="submit" value="예약하기">	
 

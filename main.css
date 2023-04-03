@@ -140,7 +140,7 @@ footer{
 
 #reservation {
     margin: 0 auto;
-    width: 400px;
+    width: 600px;
     border: 1px solid black;
     padding: 20px;
 }
@@ -176,7 +176,7 @@ input[type="submit"] {
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    float: right;
+    text-align: center;
 }
 input[type="submit"]:hover {
     background-color: #45a049;
@@ -184,6 +184,13 @@ input[type="submit"]:hover {
 
 #reservation1{
     text-align: center;
+}
+
+#caution{
+    margin: 0 auto;
+    width: 600px;
+    border: 1px solid black;
+    padding: 20px;
 }
 
 
