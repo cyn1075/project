@@ -134,7 +134,7 @@
             </div>
         </div><br><br>
 
-        <div id="reservation1"> <h1>예약 하기</h1> </div><br><br>
+        <div id="reservation1"> <h1>예약 하기</h1> </div>
 
         
         <div id="reservation">
