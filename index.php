@@ -192,7 +192,7 @@
         </div>
 
         <div id="chkbox">
-        개인정보취급방침에 동의함
+        개인정보취급방침에 동의함<input id="ck1" type="checkbox"></input>
         </div>
 
         <div id="s_button">
