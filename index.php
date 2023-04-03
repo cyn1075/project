@@ -132,13 +132,13 @@
                 <img src="6.jpg">
                 <div class="desc">서비스 준비중 입니다.</div>
             </div>
-        </div><br><br><br><br>
+        </div><br><br><br>
 
-        <div id="reservation1"> <h1>예약 하기</h1> </div>
 
-        
+        <div id="reservation2"></div><br><br><br>
+        <div id="reservation1"> <h1>예약 하기</h1></div>
         <div id="reservation">
-		<label for="name">아이디</label><br>
+		<label for="name">아이디</label>
 		<b> <?php echo $_SESSION['userid']; ?></b>
 
 		<label for="phone">전화번호</label>
@@ -206,7 +206,7 @@
 
       const section1 = document.getElementById('logo');
       const section2 = document.getElementById('container1');
-      const section3 = document.getElementById('reservation1');
+      const section3 = document.getElementById('reservation2');
       const section4 = document.getElementById('map');
 
       menu1.addEventListener('click', () => {
