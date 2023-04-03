@@ -134,11 +134,12 @@
             </div>
         </div><br><br>
 
+        <div id="reservation1"></div><br><br>
 
         <h1 >예약 하기</h1>
         <div id="reservation">
-		<label for="name">아이디</label>
-		<label> <?php session_start(); echo $_SESSION['userid']; ?></label>
+		<label for="name">아이디</label><br>
+		<label for="name"> <?php session_start(); echo $_SESSION['userid']; ?></label>
 
 		<label for="phone">전화번호</label>
 		<input type="tel" id="phone" name="phone" required>
@@ -205,7 +206,7 @@
 
       const section1 = document.getElementById('logo');
       const section2 = document.getElementById('container1');
-      const section3 = document.getElementById('reservation');
+      const section3 = document.getElementById('reservation1');
       const section4 = document.getElementById('map');
 
       menu1.addEventListener('click', () => {
