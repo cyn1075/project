@@ -191,8 +191,13 @@
                  이를 위반하여 발생하는 모든 문제에 대해 매장에서는 책임을 지지 않습니다.</p>
         </div>
 
+        <div id="chkbox">
+        개인정보취급방침에 동의함
+        </div>
 
-	<input type="submit" value="예약하기">	
+        <div id="s_button">
+	          <input type="submit" value="예약하기">
+         </div>	
 
         <div></div><br><br><br>
        

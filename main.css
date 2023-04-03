@@ -182,11 +182,22 @@ input[type="submit"]:hover {
     background-color: #45a049;
 }
 
+#s_button{
+    text-align: center;
+}
+
 #reservation1{
     text-align: center;
 }
 
 #caution{
+    margin: 0 auto;
+    width: 800px;
+    border: 1px solid black;
+    padding: 20px;
+}
+
+#chkbox{
     margin: 0 auto;
     width: 800px;
     border: 1px solid black;
