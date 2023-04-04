@@ -21,6 +21,21 @@ $db = mysqli_connect('13.124.103.127', 'choi', 'choichoi', 'mysql');
 session_start();
 $username = $_SESSION['userid'];
 
+if('차무식' == $username){
+    $sql = "SELECT * FROM reservation";
+    $result = mysqli_query($db, $sql);
+
+
+    while($row = mysqli_fetch_array($result)) {
+        echo "<tr><td>".$row["user_id"]."</td><td>".$row["phone"]."</td><td>".$row["menu"]."</td><td>".$row["date"]."</td><td>".$row["time"]."</td><td>".$row["num_people"]."</td></tr>";
+    }
+    echo "</table>";
+    mysqli_close($db);
+
+}else{
+
+
+
 $sql = "SELECT * FROM reservation WHERE user_id='$username'";
 $result = mysqli_query($db, $sql);
 
@@ -29,6 +44,8 @@ while($row = mysqli_fetch_array($result)) {
 }
 echo "</table>";
 mysqli_close($db);
+
+}
 ?>
 
 
