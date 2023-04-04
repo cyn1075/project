@@ -20,7 +20,7 @@ $db = mysqli_connect('13.124.103.127', 'choi', 'choichoi', 'mysql');
  if($db){
     echo "<script>
     alert('예약이 완료되었습니다.');
-    location.href='first_escape.php';</script>";
+    location.href='read_reservation.php';</script>";
 }else{
     echo "<script>
     alert('글쓰기에 실패했습니다.');

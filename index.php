@@ -63,6 +63,7 @@
               ?>
               <div class =login_sign_menu>
               <b> <?php echo $_SESSION['userid']; ?></b>님 반갑습니다. //
+              <a href="read_reservation.php" font-size:15.5px;>>[예약 정보]</a> //
               <a href="logout.php" font-size:15.5px;>로그아웃</a>
               </div>
     <?php
