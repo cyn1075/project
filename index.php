@@ -192,11 +192,11 @@
         </div>
 
         <div id="chkbox">
-        <input id="ck1" type="checkbox">개인정보취급방침에 동의함</input>
+        <input id="ck1" type="checkbox" onclick="enable()">개인정보취급방침에 동의함</input>
         </div>
 
         <div id="s_button">
-	          <input type="submit" value="예약하기">
+	          <!-- <input type="submit" value="예약하기"> -->
               <button disabled ="true" id="chk_btn">예약하기</button>
          </div>	
 
