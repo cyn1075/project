@@ -139,7 +139,7 @@
         <div id="reservation2"></div><br><br><br>
         <div id="reservation1"> <h1>예약 하기</h1></div>
         <div id="reservation">
-		<label for="name">아이디</label>
+		<label for="name">아이디(로그인 해주세요.)</label>
 		<b> <?php echo $_SESSION['userid']; ?></b>
 
 		<label for="phone">전화번호</label>
@@ -197,7 +197,22 @@
 
         <div id="s_button">
 	          <input type="submit" value="예약하기">
+              <button disabled ="true" id="chk_btn">예약하기</button>
          </div>	
+
+         <script>
+            function enable(){
+                var check =document.getElementById("ck1");
+                var btn =document.getElementById("chk_btn");
+                if(check.checked){
+                    btn.removeAttribute("disabled");
+                }else{
+                    btn.disabled = "true";
+                }
+            }
+         </script>
+
+
 
         <div></div><br><br><br>
        
