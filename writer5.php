@@ -9,7 +9,7 @@
         <h1><a href="/">후기 게시판</a></h1>
         <h4>후기를 작성해 주세요.</h4>
         <div id="write_area">
-            <form action="write_ok5.php" method="POST">
+            <form action="writer_ok5.php" method="POST">
             <div id="in_title">
                         <textarea name="title" id="utitle" rows="1" cols="55" placeholder="제목" maxlength="100" required></textarea>
                     </div>
