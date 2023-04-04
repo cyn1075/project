@@ -2,7 +2,7 @@
 <head>
     <meta charset="UTF-8">
     <title>후기 게시판</title>
-    <link rel="stylesheet" type="text/css" href="writer3.css"/>
+    <link rel="stylesheet" type="text/css" href="writer.css"/>
 </head>
 <body>
     <div id ="board_write">
