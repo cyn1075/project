@@ -35,7 +35,7 @@
 
 
 <body onload="javascript:openPopup('popup.php')">
-<form>
+<form action="reservation_ok.php" method="POST">
     <div id="page">
 
         <header>
@@ -148,11 +148,11 @@
 		<label for="menu">방탈출 리스트</label>
 		<select id="menu" name="menu">
             <option value="">방탈출을 선택해 주세요.</option>
-			<option value="A">열쇠공의 이중생활</option>
-			<option value="B">미씽</option>
-			<option value="C">운명</option>
-			<option value="D">전래동 살인사건</option>
-			<option value="E">디어 마르시</option>
+			<option value="열쇠공의 이중생활">열쇠공의 이중생활</option>
+			<option value="미씽">미씽</option>
+			<option value="운명">운명</option>
+			<option value="전래동 살인사건">전래동 살인사건</option>
+			<option value="디어 마르시">디어 마르시</option>
 		</select>
 
 		<label for="date">예약 날짜</label>
@@ -197,7 +197,7 @@
 
         <div id="s_button">
 	          <!-- <input type="submit" value="예약하기"> -->
-              <button disabled ="true" id="chk_btn">예약하기</button>
+              <button disabled ="true" id="chk_btn" type ="submit">예약하기</button>
          </div>	
 
          <script>
@@ -210,6 +210,8 @@
                     btn.disabled = "true";
                 }
             }
+
+            
          </script>
 
 
