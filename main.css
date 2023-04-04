@@ -178,9 +178,9 @@ input[type="number"] {
     cursor: pointer;
     text-align: center;
 } */
-input[type="submit"]:hover {
+/* input[type="submit"]:hover {
     background-color: #45a049;
-}
+} */
 
 #s_button{
     text-align: center;
