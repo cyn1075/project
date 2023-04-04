@@ -46,8 +46,8 @@ if($_SESSION['userid'] == $board['name']){
         <ul id ="ul_list">
 			<li><a href="index.php">[홈으로]</a></li>
 			<li><a href="escape5.php">[목록으로]</a></li>
-			<li><a href="modify.php?idx=<?php echo $board['idx']; ?>">[수정]</a></li>
-			<li><a href="delete.php?idx=<?php echo $board['idx']; ?>">[삭제]</a></li>
+			<li><a href="modify5.php?idx=<?php echo $board['idx']; ?>">[수정]</a></li>
+			<li><a href="delete5.php?idx=<?php echo $board['idx']; ?>">[삭제]</a></li>
 		</ul>
 
 <?php }else{
