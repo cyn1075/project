@@ -24,8 +24,8 @@ $username = $_SESSION['userid'];
 $sql = "SELECT * FROM reservation WHERE user_id='$username'";
 $result = mysqli_query($db, $sql);
 
-echo "<table>";
-echo "<tr><th>Phone</th><th>Menu</th><th>Date</th><th>Time</th><th>Number of People</th></tr>";
+// echo "<table>";
+// echo "<tr><th>Phone</th><th>Menu</th><th>Date</th><th>Time</th><th>Number of People</th></tr>";
 
 while($row = mysqli_fetch_array($result)) {
     echo "<tr><td>".$row["user_id"]."</td><td>".$row["phone"]."</td><td>".$row["menu"]."</td><td>".$row["date"]."</td><td>".$row["time"]."</td><td>".$row["num_people"]."</td></tr>";
@@ -33,6 +33,12 @@ while($row = mysqli_fetch_array($result)) {
 echo "</table>";
 mysqli_close($db);
 ?>
+
+
+        <div id="button">
+        <a href="index.php"><button>확인</button></a>
+         </div>	
+
 </table>
 </body>
 </html>
