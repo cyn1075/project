@@ -9,7 +9,7 @@ $board = $sql->fetch_array();
 <head>
 <meta charset="UTF-8">
 <title>게시판</title>
-<link rel="stylesheet" href="writer3.css" />
+<link rel="stylesheet" href="writer.css" />
 </head>
 <body>
     <div id="board_write">
