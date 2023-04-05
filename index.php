@@ -193,7 +193,7 @@
         </div>
 
         <div id="chkbox">
-        <input id="ck1" type="checkbox" onclick="enable()">개인정보취급방침에 동의함</input>
+        <input id="ck1" type="checkbox" onclick="enable()">주의사항과 개인정보취급방침에 동의함</input>
         </div>
 
         <div id="s_button">

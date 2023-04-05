@@ -50,6 +50,16 @@ if($_SESSION['userid'] == $board['name']){
 			<li><a href="delete2.php?idx=<?php echo $board['idx']; ?>">[삭제]</a></li>
 		</ul>
 
+		<?php }else if('차무식' == $_SESSION['userid']){ ?>
+
+<ul id ="ul_list">
+		<li><a href="index.php">[홈으로]</a></li>
+		<li><a href="escape2.php">[목록으로]</a></li>
+		<li><a href="modify2.php?idx=<?php echo $board['idx']; ?>">[수정]</a></li>
+		<li><a href="delete2.php?idx=<?php echo $board['idx']; ?>">[삭제]</a></li>
+	</ul>
+
+
 <?php }else{
 	?>
 	<ul id ="ul_list">
