@@ -1,6 +1,6 @@
 <?php
 
-$con = new mysqli('13.124.103.127', 'choi', 'choichoi', 'mysql');
+$con = mysqli_connect('13.124.103.127', 'choi', 'choichoi', 'mysql');
 
 $id = $_POST['userId'];
 $pw = $_POST['userPw'];
@@ -14,9 +14,9 @@ $result = mysqli_query($con, $sql);
 
 
 if($result){
-    echo "성공";
+    echo "성공 , $id";
 }else{
-    echo"실패";
+    echo"실패, $id ";
 }
 
 mysqli_close($con);
