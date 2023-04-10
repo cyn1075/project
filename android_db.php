@@ -12,4 +12,16 @@ $date = date('Y-m-d');
 $sql = "INSERT INTO android_signup (id, pw, name, phone, date) VALUES('$id', '$pw', '$name', '$phone', $date)";
 $result = mysqli_query($con, $sql);
 
+
+if($result){
+    echo "성공";
+}else{
+    echo"실패";
+}
+
+mysqli_close($con);
+
+
+
+
 ?>
