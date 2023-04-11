@@ -7,7 +7,7 @@ $pw = $_POST['pw'];
 
 $sql = "SELECT * FROM android_signup WHERE id='$id' AND (pw ='$pw')";
 
-$result = mysqli_query($db, $sql);
+$result = mysqli_query($con, $sql);
 
 $member = mysqli_fetch_array($result);
 
