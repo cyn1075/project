@@ -5,7 +5,7 @@ $con = mysqli_connect('13.124.103.127', 'choi', 'choichoi', 'mysql');
 $id = $_POST['id'];
 $pw = $_POST['pw'];
 
-$sql = "SELECT * FROM android_signup WHERE id='$id' AND (pw='$pw')";
+$sql = "SELECT * FROM android_signup WHERE id='$id' AND (pw ='$pw')";
 
 $result = mysqli_query($db, $sql);
 
@@ -15,7 +15,7 @@ print_r($member);
 
 
 if($member==0){
-    echo "로그인 실패";
+    echo 1;
 }else{
     echo $member['name'];
     exit();
