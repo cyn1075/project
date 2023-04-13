@@ -5,11 +5,11 @@ $con = mysqli_connect('13.124.103.127', 'choi', 'choichoi', 'mysql');
 $id = $_POST['userId'];
 $pw = $_POST['userPw'];
 $name = $_POST['userName'];
-$phone = $_POST['userPhone'];
+// $phone = $_POST['userPhone'];
 $date = date('Y-m-d');
 
 
-$sql = "INSERT INTO android_signup(id, pw, name, phone, date) values('$id', '$pw', '$name', '$phone', '$date')";
+$sql = "INSERT INTO android_signup(id, pw, name, phone, date) values('$id', '$pw', '$name', '1', '$date')";
 $result = mysqli_query($con, $sql);
 
 
