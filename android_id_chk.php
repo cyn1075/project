@@ -6,7 +6,7 @@ $id = $_POST['id'];
 
 $sql = "SELECT * FROM android_signup WHERE id='$id'" ;
 
-$result = $mysqli->query($sql);
+$result = $con->query($sql);
 
 if ($result->num_rows > 0) {
     echo 1;
