@@ -6,18 +6,23 @@ $id = $_POST['id'];
 $pw = $_POST['pw'];
 
 $sql = "SELECT * FROM android_signup WHERE id='$id' AND (pw ='$pw')";
+$sql2 = "SELECT name FROM android_signup";
 
+
+$result2 = mysqli_query($con, $sql2);
 $result = mysqli_query($con, $sql);
 
 $member = mysqli_fetch_array($result);
+$member2 = mysqli_fetch_array($result2);
 
 print_r($member);
+print_r($member2);
 
 
 if($member==0){
     echo 1;
 }else{
-    echo $member['name'];
+    echo $member2['name'];
     exit();
 }
 

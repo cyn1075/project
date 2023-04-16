@@ -16,7 +16,6 @@ if ($result->num_rows > 0) {
     echo 1;
 } else {
     echo 0;
-    echo $member['name'];
 }
 
 $mysqli->close();
