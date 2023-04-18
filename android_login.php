@@ -6,7 +6,7 @@ $id = $_POST['id'];
 $pw = $_POST['pw'];
 
 $sql = "SELECT * FROM android_signup WHERE id='$id' AND (pw ='$pw')";
-$sql2 = "SELECT name FROM android_signup";
+$sql2 = "SELECT name FROM android_signup WhERE id ='$id'";
 
 
 $result2 = mysqli_query($con, $sql2);
