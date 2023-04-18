@@ -15,7 +15,7 @@ $result = mysqli_query($con, $sql);
 $member = mysqli_fetch_array($result);
 $member2 = mysqli_fetch_array($result2);
 
-print_r($member);
+// print_r($member);
 
 
 if($member==0){
