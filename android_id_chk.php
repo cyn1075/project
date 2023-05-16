@@ -10,7 +10,6 @@ $result = $con->query($sql);
 
 $member = mysqli_fetch_array($result);
 
-print_r($member);
 
 if ($result->num_rows > 0) {
     echo 1;
