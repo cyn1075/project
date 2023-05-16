@@ -10,14 +10,14 @@ $name = $_POST['userName'];
 $date = date('Y-m-d');
 
 
-$sql = "INSERT INTO android_signup(id, pw, phone, image, name, date) values('$id', '$pw', '$phone', '$image', '$name' '$date')";
+$sql = "INSERT INTO android_signup(id, pw, phone, image, name, date) values('$id', '$pw', '$phone', '$image', '$name', '$date')";
 $result = mysqli_query($con, $sql);
 
 
 if($result){
     echo "성공, $id";
 }else{
-    echo"실패, $id";
+    echo"실패";
 }
 
 mysqli_close($con);
