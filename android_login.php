@@ -23,7 +23,7 @@ $member3 = mysqli_fetch_array($result3);
 if($member==0){
     echo 1;
 }else{
-    echo $member2['name'], $member3['image'];
+    echo $member2['name']. "," .$member3['image'];
     exit();
 }
 
