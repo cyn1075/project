@@ -4,7 +4,7 @@ $con = mysqli_connect('13.124.103.127', 'choi', 'choichoi', 'mysql');
 
 $id = $_POST['userid'];
 
-$sql = "SELECT * FROM android_signup WHERE id='$id' AND (pw ='$pw')";
+$sql = "SELECT * FROM android_signup WHERE id='$id'";
 $sql2 = "SELECT name FROM android_signup WhERE id ='$id'";
 $sql3 = "SELECT image FROM android_signup WhERE id ='$id'";
 
