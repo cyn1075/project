@@ -5,7 +5,7 @@ $con = mysqli_connect('13.124.103.127', 'choi', 'choichoi', 'mysql');
 $id = $_POST['userid'];
 
 $sql = "SELECT * FROM android_signup WHERE id='$id'";
-$sql2 = "SELECT id FROM android_signup WhERE kakaoid ='$id'";
+$sql2 = "SELECT id FROM android_signup WhERE id ='$id'";
 
 $result = mysqli_query($con, $sql);
 $result2 = mysqli_query($con, $sql2);
