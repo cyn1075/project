@@ -4,8 +4,6 @@ $con = mysqli_connect('13.124.103.127', 'choi', 'choichoi', 'mysql');
 
 $id = $_POST['userId'];
 
-
-
 $sql = "INSERT INTO kakao_call(id) values('$id')";
 $result = mysqli_query($con, $sql);
 
@@ -17,8 +15,5 @@ if($result){
 }
 
 mysqli_close($con);
-
-
-
 
 ?>
