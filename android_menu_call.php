@@ -23,10 +23,10 @@ $response = array();
 if($member==0){
     $response['status'] = 1;
 }else{
-    $response['status'] = 0;
-    $response['title'] = $member2['title'];
-    $response['image'] = $member3['image'];
-    
+    // $response['status'] = 0;
+    // $response['title'] = $member2['title'];
+    // $response['image'] = $member3['image'];
+    print_r($member);
 }
 
 header('Content-Type: application/json; charset=utf-8');
