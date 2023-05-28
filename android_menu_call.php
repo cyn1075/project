@@ -17,11 +17,14 @@ $member = mysqli_fetch_array($result);
 $member2 = mysqli_fetch_array($result2);
 $member3 = mysqli_fetch_array($result3);
 
-$response = array();
+// $response = array();
 
 
 if($member==0){
-    $response['status'] = 1;
+    // $response['status'] = 1;
+
+    echo 1;
+
 }else{
     // $response['status'] = 0;
     // $response['title'] = $member2['title'];
