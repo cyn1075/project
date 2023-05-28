@@ -16,9 +16,9 @@ $response = array();
 if (mysqli_num_rows($result) > 0) {
     $row = mysqli_fetch_assoc($result);
     $response['success'] = true;
-    $response['id'] = $row['id'];
     $response['name'] = $row['name'];
-    $response['description'] = $row['description'];
+    $response['title'] = $row['title'];
+    $response['image'] = $row['image'];
     
 
     echo json_encode($response);
