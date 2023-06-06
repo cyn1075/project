@@ -13,20 +13,18 @@ $member = mysqli_fetch_array($result);
 
 $response = array();
 
-if (mysqli_num_rows($result) > 0) {
-    $row = mysqli_fetch_assoc($result);
-    $response['success'] = true;
-    $response['name'] = $row['name'];
-    $response['title'] = $row['title'];
-    $response['image'] = $row['image'];
+if (mysqli_num_rows($result) == 0) {
+
+    echo 1;
     
-
-    echo json_encode($response);
 } else {
-    $response['success'] = false;
-    $response['message'] = "No data found for the given member.";
+   
+    for($i=0;$i<$rowCnt;$i++){
 
-    echo json_encode($response);
+        $row = mysqli_fetch_array($result, MYSQL_ASSOC);
+        $response[$i] = $row;
+    }
+
 }
 
 mysqli_close($con);
