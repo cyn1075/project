@@ -13,7 +13,7 @@ $member = mysqli_fetch_array($result);
 
 $response = array();
 
-if (mysqli_num_rows($result) == 0) {
+if ($member == 0) {
 
     echo 1;
     
