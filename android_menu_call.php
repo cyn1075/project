@@ -9,7 +9,7 @@ $sql = " SELECT * FROM android_menu WHERE name = '$name' ";
 
 $result = mysqli_query($con, $sql);
 
-$member = mysqli_fetch_array($result);
+$member = mysqli_fetch_array($result, MYSQL_ASSOC);
 
 $response = array();
 
@@ -18,9 +18,7 @@ if ($member == 0) {
 } else {
    
     for($i=0;$i<$rowCnt;$i++){
-
-        $row = mysqli_fetch_array($result, MYSQL_ASSOC);
-        $response[$i] = $row;
+        $response[$i] = $member;
     }
 
 }
