@@ -1,27 +1,171 @@
-'use strict';
-
-// On this codelab, you will be streaming only video (video: true).
-const mediaStreamConstraints = {
-  video: true,
-};
-
-// Video element where stream will be placed.
-const localVideo = document.querySelector('video');
-
-// Local stream that will be reproduced on the video.
+let localVideo = document.getElementById("localVideo");
+let remoteVideo = document.getElementById("remoteVideo");
 let localStream;
 
-// Handles success by adding the MediaStream to the video element.
-function gotLocalMediaStream(mediaStream) {
-  localStream = mediaStream;
-  localVideo.srcObject = mediaStream;
+navigator.mediaDevices
+    .getUserMedia({
+        video: true,
+        audio: false,
+    })
+    .then(gotStream)
+    .catch((error) => console.error(error));
+    
+function gotStream(stream) {
+    console.log("Adding local Stream");
+    localStream = stream;
+    localVideo.srcObject = stream;
+    sendMessage("got user media");
+    if(isInitiator){
+        maybeStart();
+    }
 }
 
-// Handles error by logging a message to the console with the error message.
-function handleLocalMediaStreamError(error) {
-  console.log('navigator.getUserMedia error: ', error);
+function sendMessage(message){
+    console.log('Client sending message: ',message);
+    socket.emit('message',message);
 }
 
-// Initializes media stream.
-navigator.mediaDevices.getUserMedia(mediaStreamConstraints)
-  .then(gotLocalMediaStream).catch(handleLocalMediaStreamError);
+function createPeerConnection(){
+    try{
+        pc = new RTCPeerConnection(null);
+        pc.onicecandidate = handleIceCandidate;
+        pc.onaddstream = handleRemoteStreamAdded;
+        console.log("Created RTCPeerConnection");
+    }   catch (e) {
+         alert("cannot create RTCPeerConnection object");
+         return;
+    }
+}
+
+function handleIceCandidate(event){
+    console.log("iceCandidateEvent", event);
+    if(event.candidate){
+        sendMessage({
+            type:"candidate",
+            label: event.candidate.sdpMLineIndex,
+            id: event.candidate.sdpMid,
+            candidate: event.candidate.candidate,
+        });
+    } else{
+        console.log("end of candidates");
+    }
+}
+
+function handleRemoteStreamAdded(event){
+    console.log("remote stream added");
+    remoteStream = event.stream;
+    remoteVideo.srcObject = remoteStream;
+}
+
+function handleCreateOfferError(event){
+    console.log("createOffer() error: ", event);
+}
+
+function maybeStart() {
+    console.log(">>MaybeStart() : ", isStarted, localStream, isChannelReady);
+    if (!isStarted && typeof localStream !== "undefined" && isChannelReady) {
+        console.log(">>>>> creating peer connection");
+        createPeerConnection();
+        pc.addStream(localStream);
+        isStarted = true;
+        console.log("isInitiator : ", isInitiator);
+        if (isInitiator) {
+          doCall();
+        }
+     }else{
+        console.error('maybeStart not Started!');
+    }
+}
+
+function doCall() {
+    console.log("Sending offer to peer");
+    pc.createOffer(setLocalAndSendMessage, handleCreateOfferError);
+}
+
+function doAnswer() {
+    console.log("Sending answer to peer");
+    pc.createAnswer().then(
+    setLocalAndSendMessage,
+    onCreateSessionDescriptionError
+  );
+}
+
+function setLocalAndSendMessage(sessionDescription) {
+    pc.setLocalDescription(sessionDescription);
+    sendMessage(sessionDescription);
+}
+
+let pcConfig = {
+    'iceServers': [{
+        'urls': 'stun:stun.l.google.com:19302'
+      }]
+}
+
+socket.on('message', (message)=>{
+  console.log('Client received message :',message);
+  if(message === 'got user media'){
+    maybeStart();
+  }else if(message.type === 'offer'){
+    if(!isInitiator && !isStarted){
+      maybeStart();
+    }
+    pc.setRemoteDescription(new RTCSessionDescription(message));
+    doAnswer();
+  }else if(message.type ==='answer' && isStarted){
+    pc.setRemoteDescription(new RTCSessionDescription(message));
+  }else if(message.type ==='candidate' &&isStarted){
+    const candidate = new RTCIceCandidate({
+      sdpMLineIndex : message.label,
+      candidate:message.candidate
+    });
+
+    pc.addIceCandidate(candidate);
+  }
+})
+
+const http = require('http');
+const os = require('os');
+const socketIO = require('socket.io');
+const nodeStatic = require('node-static');
+
+let fileServer = new(nodeStatic.Server)();
+let app = http.createServer((req,res)=>{
+    fileServer.serve(req,res);
+}).listen(8080);
+
+let io = socketIO.listen(app);
+io.sockets.on('connection',socket=>{
+    function log() {
+        let array = ['Message from server:'];
+        array.push.apply(array,arguments);
+        socket.emit('log',array);
+    }
+
+    socket.on('message',message=>{
+        log('Client said : ' ,message);
+        socket.broadcast.emit('message',message);
+    });
+
+    socket.on('create or join',room=>{
+        let clientsInRoom = io.sockets.adapter.rooms[room];
+        let numClients = clientsInRoom ? Object.keys(clientsInRoom.sockets).length : 0;
+        log('Room ' + room + ' now has ' + numClients + ' client(s)');
+        
+        if(numClients === 0){
+            console.log('create room!');
+            socket.join(room);
+            log('Client ID ' + socket.id + ' created room ' + room);
+            socket.emit('created',room,socket.id);
+        }
+        else if(numClients===1){
+            console.log('join room!');
+            log('Client Id' + socket.id + 'joined room' + room);
+            io.sockets.in(room).emit('join',room);
+            socket.join(room);
+            socket.emit('joined',room,socket.id);
+            io.sockets.in(room).emit('ready');
+        }else{
+            socket.emit('full',room);
+        }
+    });
+});
