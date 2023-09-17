@@ -1,44 +1,51 @@
 <?php
+
+// 데이터베이스 연결
 $con = mysqli_connect('13.124.103.127', 'choi', 'choichoi', 'mysql');
 
+// 사용자로부터 입력 받은 데이터
 $id = $_POST['userId'];
 $pw = $_POST['userPw'];
 $phone = $_POST['userPhone'];
 $name = $_POST['userName'];
 $date = date('Y-m-d');
 
-// 이미지 업로드 관련
-$image = $_FILES['userImage']['tmp_name']; // 업로드된 이미지의 임시 경로
-$imageName = $_FILES['userImage']['name']; // 업로드된 이미지의 원래 파일명
+// 파일 업로드 관련 정보
+$upload_dir = '/home/project'; // 사진을 저장할 디렉토리 경로를 지정해야 합니다.
 
-// 이미지 파일 검증
-$allowedExtensions = array("jpg", "jpeg", "png", "gif");
-$ext = pathinfo($imageName, PATHINFO_EXTENSION);
-if (!in_array(strtolower($ext), $allowedExtensions)) {
-    echo "이미지 파일이 아닙니다.";
-    exit;
-}
-
-// 이미지 파일을 저장할 디렉토리 경로 설정
-$uploadDir = 'home/project'; // 저장할 디렉토리 경로
-$uniqueFileName = uniqid() . '.' . $ext; // 고유한 파일명 생성
-$targetPath = $uploadDir . $uniqueFileName; // 저장할 경로
-
-// 이미지 파일을 디렉토리로 이동
-if (move_uploaded_file($image, $targetPath)) {
-    // 이미지 업로드 성공, 데이터베이스에 저장
-    $sql = "INSERT INTO android_signup(id, pw, phone, image, name, date) VALUES (?, ?, ?, ?, ?, ?)";
-    $stmt = mysqli_prepare($con, $sql);
-    mysqli_stmt_bind_param($stmt, 'ssssss', $id, $pw, $phone, $targetPath, $name, $date);
-    if (mysqli_stmt_execute($stmt)) {
-        echo "성공, $id";
-    } else {
-        echo "실패";
+// 'userImage' 필드에서 이미지 업로드 처리
+if(isset($_FILES['userImage']) && $_FILES['userImage']['error'] == 0){
+    $org_file = $_FILES['userImage']['name'];
+    $temp_mem = explode(".", $org_file);
+    $file_expt = $temp_mem[1];
+    
+    // 파일명 중복 검사 및 처리
+    $fix_filename = $temp_mem[0];
+    $fix_i = 0;
+    while(file_exists($upload_dir . $fix_filename . "." . $file_expt)){
+        $fix_i++;
+        $fix_filename = $temp_mem[0] . "(" . $fix_i . ")";
     }
-    mysqli_stmt_close($stmt);
+    
+    // 이미지 업로드
+    $image = $fix_filename . "." . $file_expt;
+    move_uploaded_file($_FILES['userImage']['tmp_name'], $upload_dir . $image);
 } else {
-    echo "이미지 업로드 실패";
+    // 'userImage' 필드에서 이미지가 업로드되지 않았을 경우 기본값 또는 오류 처리를 추가할 수 있습니다.
+    $image = ''; // 또는 기본 이미지 파일명을 설정할 수 있습니다.
 }
 
+// SQL 쿼리 실행
+$sql = "INSERT INTO android_signup(id, pw, phone, image, name, date) VALUES ('$id', '$pw', '$phone', '$image', '$name', '$date')";
+$result = mysqli_query($con, $sql);
+
+// 결과 출력
+if($result){
+    echo "성공, $id";
+}else{
+    echo "실패";
+}
+
+// 데이터베이스 연결 종료
 mysqli_close($con);
 ?>
