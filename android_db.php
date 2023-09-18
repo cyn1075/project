@@ -12,8 +12,8 @@ $date = date('Y-m-d');
 
 // 이미지 업로드 처리
 if(isset($_FILES['userImage'])){
-    $target_dir = "/home/project"; // 이미지를 저장할 디렉토리 경로
-    $target_file = $target_dir . basename($_FILES["userImage"]["name"]); // 업로드한 이미지 파일 경로
+    $target_dir = "./home/project"; // 이미지를 저장할 디렉토리 경로
+    $target_file = $target_dir. '/' .basename($_FILES["userImage"]["name"]); // 업로드한 이미지 파일 경로
 
     // 이미지를 지정한 디렉토리로 이동
     if (move_uploaded_file($_FILES["userImage"]["tmp_name"], $target_file)) {
