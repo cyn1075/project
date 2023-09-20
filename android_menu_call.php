@@ -15,8 +15,9 @@ $response = array();
 
 if (mysqli_num_rows($result) > 0) {
     while($row = mysqli_fetch_assoc($result)){
-        array_push($response,
-        array('name' => $row['name'],
+
+        array_push($response, array(
+        'name' => $row['name'],
         'title' => $row['title'],
         'image' => $row['image']
         )
@@ -30,7 +31,7 @@ if (mysqli_num_rows($result) > 0) {
 
 }
 
-echo json_encode($response, JSON_UNESCAPED_UNICODE);
+echo json_encode($response);
 
 mysqli_close($con);
 ?>
