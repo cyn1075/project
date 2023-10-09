@@ -39,20 +39,13 @@ curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($fields));
 
 $result = curl_exec($ch);           
 
-// if ($result === FALSE) {		
-//    die('Curl failed: ' . curl_error($ch));		
-// }
-
-// curl_close($ch);
-
-// return $result;
-
-
-if($result){
-    echo "성공";
-}else{
-    echo "실패";
+if ($result === FALSE) {		
+   die('Curl failed: ' . curl_error($ch));		
 }
+
+curl_close($ch);
+
+return $result;
 
 
 }
