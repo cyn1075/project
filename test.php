@@ -58,8 +58,6 @@ if($result){
 }
 
 
-
-
 $tokens = $token;
 
 
@@ -69,9 +67,6 @@ $message = array(
 );
 
 send_notification($tokens, $message);
-
-
-// echo($token);
 
 
 ?>
