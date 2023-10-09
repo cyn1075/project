@@ -2,8 +2,6 @@
 
 $token= $_POST["Token"];
 
-echo($token);
-
 function send_notification($tokens, $message) {
 
 $url = 'https://fcm.googleapis.com/fcm/send';
@@ -41,13 +39,21 @@ curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($fields));
 
 $result = curl_exec($ch);           
 
-if ($result === FALSE) {		
-   die('Curl failed: ' . curl_error($ch));		
+// if ($result === FALSE) {		
+//    die('Curl failed: ' . curl_error($ch));		
+// }
+
+// curl_close($ch);
+
+// return $result;
+
+
+if($result){
+    echo "성공";
+}else{
+    echo "실패";
 }
 
-curl_close($ch);
-
-return $result;
 
 }
 
@@ -63,5 +69,9 @@ $message = array(
 );
 
 send_notification($tokens, $message);
+
+
+// echo($token);
+
 
 ?>
