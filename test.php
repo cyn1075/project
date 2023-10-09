@@ -2,6 +2,8 @@
 
 $token= $_POST["Token"];
 
+echo($token);
+
 function send_notification($tokens, $message) {
 
 $url = 'https://fcm.googleapis.com/fcm/send';
