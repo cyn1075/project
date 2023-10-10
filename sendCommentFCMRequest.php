@@ -2,10 +2,7 @@
 // define('API_ACCESS_KEY','AAAAc_IEV4A:APA91bFrBDHi3pbT7Qh8YmD3vfzlK4YQ-QZaO6Ce8LVfLrfiLK-gfRz9naUurejx8MqhItaR2HFDkRE_Av-Rad4yquHCrxufh7_BVTK3y4xw6b4qiGmRNIMoYz2l-9-tlnQ1QBGehGws');
 //  $fcmUrl = 'https://fcm.googleapis.com/fcm/send';
 
- $token= $_POST["Token"]; //해당 Device TokenKey
-
-echo($token);
-
+ $token= $_GET["Token"]; //해당 Device TokenKey
 
 $ch = curl_init("https://fcm.googleapis.com/fcm/send");
         $header = array("Content-Type:application/json", "Authorization: key=AAAAc_IEV4A:APA91bFrBDHi3pbT7Qh8YmD3vfzlK4YQ-QZaO6Ce8LVfLrfiLK-gfRz9naUurejx8MqhItaR2HFDkRE_Av-Rad4yquHCrxufh7_BVTK3y4xw6b4qiGmRNIMoYz2l-9-tlnQ1QBGehGws");
@@ -20,6 +17,11 @@ $ch = curl_init("https://fcm.googleapis.com/fcm/send");
         curl_setopt($ch, CURLOPT_POST, 1);
         curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
         curl_exec($ch);
+
+
+
+
+
 
 
 
