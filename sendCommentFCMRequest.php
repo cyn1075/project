@@ -17,6 +17,7 @@ $ch = curl_init("https://fcm.googleapis.com/fcm/send");
         curl_setopt($ch, CURLOPT_POST, 1);
         curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
         curl_exec($ch);
+        .
 
 
 
