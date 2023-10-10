@@ -20,7 +20,7 @@ echo($token);
             'data' => $extraNotificationData
         ];
         $headers = [
-            'Authorization: key= AAAAc_IEV4A:APA91bFrBDHi3pbT7Qh8YmD3vfzlK4YQ-QZaO6Ce8LVfLrfiLK-gfRz9naUurejx8MqhItaR2HFDkRE_Av-Rad4yquHCrxufh7_BVTK3y4xw6b4qiGmRNIMoYz2l-9-tlnQ1QBGehGws', 
+            'Authorization: key=' . API_ACCESS_KEY, 
             'Content-Type: application/json'
         ];
 
