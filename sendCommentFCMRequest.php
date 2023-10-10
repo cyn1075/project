@@ -36,5 +36,12 @@ echo($token);
         curl_close($ch);
 
 
-        echo $result;
+        // echo $result;
+
+        if($result){
+            echo "성공";
+        }else{
+            echo"실패";
+        }
+        
 ?>
