@@ -29,8 +29,8 @@ if ($subscribeResult) {
     $data = json_encode(array(
         "to" => $token,
         "notification" => array(
-            "title" => "$name 님이 방송을 시작했습니다.",
-            "body" => "$title"
+            "title" => $name,
+            "body" => $title
         )
     ));
     
