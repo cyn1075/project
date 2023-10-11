@@ -18,9 +18,8 @@ if ($subscribeResult) {
 
 
     while ($row = mysqli_fetch_assoc($subscribeResult)) {
-    $token = $row;
-    // $token = $subscribeResult;
-    echo $token;
+    $token = $row['token'];
+    echo $subscribeResult;
 
     $data = json_encode(array(
         "to" => "$token",
