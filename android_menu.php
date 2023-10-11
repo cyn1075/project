@@ -8,15 +8,6 @@ $image = $_POST['profilimage'];
 
 
 
-$sql = "INSERT INTO android_menu(name, title, image) values('$name', '$title', '$image')";
-$result = mysqli_query($con, $sql);
-
-
-if($result){
-    echo "성공";
-}else{
-    echo"실패";
-}
 
 
 $subscribeSQL =  "select token from android_subscribe where subscribeid='$name'";
@@ -33,7 +24,7 @@ if ($subscribeResult) {
     $token = $row['token'];
 
     $data = json_encode(array(
-        "to" => $token,
+        "to" => "$token",
         "notification" => array(
             "title" => "$name 님이 방송을 시작했습니다.",
             "body" => "$title"
@@ -48,6 +39,18 @@ if ($subscribeResult) {
 
     }
 }
+
+
+$sql = "INSERT INTO android_menu(name, title, image) values('$name', '$title', '$image')";
+$result = mysqli_query($con, $sql);
+
+
+if($result){
+    echo "성공";
+}else{
+    echo"실패";
+}
+
 
 mysqli_close($con);
 
