@@ -7,7 +7,7 @@ $title = $_POST['profiltitle'];
 $image = $_POST['profilimage'];
 
 
-$subscribeSQL =  "select token from android_subscribe where subscribeid='$name'";
+$subscribeSQL =  "SELECT token from android_subscribe where subscribeid='$name'";
 
 $subscribeResult = mysqli_query($con, $subscribeSQL);
 
