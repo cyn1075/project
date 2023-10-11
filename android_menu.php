@@ -7,9 +7,6 @@ $title = $_POST['profiltitle'];
 $image = $_POST['profilimage'];
 
 
-
-
-
 $subscribeSQL =  "select token from android_subscribe where subscribeid='$name'";
 
 $subscribeResult = mysqli_query($con, $subscribeSQL);
@@ -22,6 +19,7 @@ if ($subscribeResult) {
 
     while ($row = mysqli_fetch_assoc($subscribeResult)) {
     $token = $row['token'];
+    echo $token;
 
     $data = json_encode(array(
         "to" => "$token",
@@ -45,11 +43,11 @@ $sql = "INSERT INTO android_menu(name, title, image) values('$name', '$title', '
 $result = mysqli_query($con, $sql);
 
 
-if($result){
-    echo "성공";
-}else{
-    echo"실패";
-}
+// if($result){
+//     echo "성공";
+// }else{
+//     echo"실패";
+// }
 
 
 mysqli_close($con);
