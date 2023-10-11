@@ -22,12 +22,12 @@ if ($subscribeResult) {
 
     // $token = $subscribeResult->fetch_array(MYSQLI_ASSOC);
 
-    while ($row = mysqli_fetch_assoc($subscribeResult)) {
-    $token = $row['token'];
+    // while ($row = mysqli_fetch_assoc($subscribeResult)) {
+    // $token = $row['token'];
     
 
     $data = json_encode(array(
-        "to" => $token['token'],
+        "to" => $member['token'],
         "notification" => array(
             "title" => "$name 님이 방송을 시작했습니다.",
             "body" => "$title"
@@ -41,7 +41,7 @@ if ($subscribeResult) {
     curl_exec($ch);
 
     }
-}
+// }
 
 
 $sql = "INSERT INTO android_menu(name, title, image) values('$name', '$title', '$image')";
