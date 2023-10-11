@@ -68,8 +68,8 @@ if ($subscribeResult) {
 }
 
 
-// $sql = "INSERT INTO android_menu(name, title, image) values('$name', '$title', '$image')";
-// $result = mysqli_query($con, $sql);
+$sql = "INSERT INTO android_menu(name, title, image) values('$name', '$title', '$image')";
+$result = mysqli_query($con, $sql);
 
 
 // if($result){
