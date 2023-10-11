@@ -48,8 +48,8 @@ if ($subscribeResult) {
     $data = json_encode(array(
         "to" => $member['token'],
         "notification" => array(
-            "title"   => "test",
-            "body" => "testBody")
+            "title"   => "밥플",
+            "body" => $title)
             ));
     curl_setopt($ch, CURLOPT_HTTPHEADER, $header);
     curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
