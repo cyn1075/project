@@ -11,7 +11,7 @@ $subscribeSQL =  "SELECT token from android_subscribe where subscribeid='$name'"
 
 $subscribeResult = mysqli_query($con, $subscribeSQL);
 
-if ($subscribeResult) {
+// if ($subscribeResult) {
 
     $ch = curl_init("https://fcm.googleapis.com/fcm/send");
     $header = array("Content-Type:application/json", "Authorization: key=AAAAc_IEV4A:APA91bFrBDHi3pbT7Qh8YmD3vfzlK4YQ-QZaO6Ce8LVfLrfiLK-gfRz9naUurejx8MqhItaR2HFDkRE_Av-Rad4yquHCrxufh7_BVTK3y4xw6b4qiGmRNIMoYzYz2l-9-tlnQ1QBGehGws");
@@ -40,7 +40,7 @@ if ($subscribeResult) {
     curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
     curl_exec($ch);
 
-    }
+    // }
 
 
     // $ch = curl_init("https://fcm.googleapis.com/fcm/send");
