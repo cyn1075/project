@@ -9,27 +9,13 @@ $sql = "select * from android_subscribe where myid='$name' and subscribeid='$sub
 
 $result = mysqli_query($db, $sql);
 
-if (mysqli_num_rows($result) > 0) {
-    
-    echo "1";
+
+
+if ($result->num_rows > 0) {
+    echo 1;
 } else {
-   
-    echo "0";
+    echo 0;
 }
 
-// if ($result) {
-//     $row = mysqli_fetch_assoc($result);
-//     $exists = $row['result'];
-    
-//     if ($exists) {
-//         echo "1";
-//     } else {
-//         echo "0";
-//     }
-// } else {
-//     echo "Error: " . mysqli_error($db);
-// }
-
-// mysqli_close($db);
 
 ?>
