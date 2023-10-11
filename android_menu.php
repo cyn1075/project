@@ -27,7 +27,7 @@ if ($subscribeResult) {
     
 
     $data = json_encode(array(
-        "to" => $token,
+        "to" => "f5HNphH5QiW2xCiG86hc-K:APA91bG-ogV9qmUL2u5O8Oh7zZqRLxq2UrqqV7ap_jscXrnFAk7N3oFrsRp02V7whJKYlbrXbEAoGXF-bXfsvtpYUnUy7HVken3VSTtO_qOmSPpREXXiiay9wOA5ORAhcVqrEEqmkxt7",
         "notification" => array(
             "title" => "test",
             "body" => "test"
