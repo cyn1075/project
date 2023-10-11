@@ -6,7 +6,7 @@ $name = $_POST['myName'];
 $subName = $_POST['subscribeName'];
 
 
-$sql = "delete from android_subscribe where name='$name' and subscribeid='$subName' ";
+$sql = "delete from android_subscribe where myid='$name' and subscribeid='$subName' ";
 $sql1 = "SET @count=0";
 $sql2 = "update android_subscribe set idx =@count:=@count+1";
 $sql3 = "ALTER TABLE idx AUTO_INCREMENT = 1";
