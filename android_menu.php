@@ -18,12 +18,13 @@ if ($subscribeResult) {
 
 
     $member = mysqli_fetch_array($subscribeResult);
+    echo $member['token'];
 
     // $token = $subscribeResult->fetch_array(MYSQLI_ASSOC);
 
     while ($row = mysqli_fetch_assoc($subscribeResult)) {
     $token = $row['token'];
-    echo $member['token'];
+    
 
     $data = json_encode(array(
         "to" => $token['token'],
