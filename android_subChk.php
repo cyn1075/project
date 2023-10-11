@@ -9,12 +9,12 @@ $sql = "select * from android_subscribe where myid='$name' and subscribeid='$sub
 
 $result = mysqli_query($db, $sql);
 
+$sub = mysqli_fetch_array($result);
 
-
-if ($result->num_rows > 0) {
-    echo 1;
-} else {
+if ($sub == 0) {
     echo 0;
+} else {
+    echo 1;
 }
 
 
