@@ -6,8 +6,6 @@ $myname = $_POST['myName'];
 $token = $_POST['token'];
 $subscribename = $_POST['subscribeName'];
 
-
-
 $sql = "INSERT INTO android_subscribe(myid, token, subscribeid) values('$myname', '$token', '$subscribename')";
 $result = mysqli_query($con, $sql);
 

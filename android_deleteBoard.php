@@ -14,15 +14,4 @@ $result2 = mysqli_query($db, $sql2);
 $result3 = mysqli_query($db, $sql3);
 
 
-if($db){
-    echo "<script>
-    alert('삭제되었습니다.');
-    location.href='escape2.php';</script>";
-}else{
-    echo "<script>
-    alert('삭제에 실패했습니다.');
-    history.back();</script>";
-}
-
-
 ?>
