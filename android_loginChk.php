@@ -20,5 +20,3 @@ if($result){
 mysqli_close($con);
 
 ?>
-
-// 이거 내일 깃허브 올려서 확인 하기.
