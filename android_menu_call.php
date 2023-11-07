@@ -6,7 +6,7 @@ $con = mysqli_connect('13.124.103.127', 'choi', 'choichoi', 'mysql');
 
 $name = $_POST['name'];
 
-$sql = " SELECT * FROM android_signup where name='$name' ";
+$sql = " SELECT * FROM android_signup where login='yes' ";
 
 
 $result = mysqli_query($con, $sql);
