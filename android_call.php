@@ -5,8 +5,8 @@ $con = mysqli_connect('13.124.103.127', 'choi', 'choichoi', 'mysql');
 $id = $_POST['userid'];
 
 $sql = "SELECT * FROM android_signup WHERE '$id'";
-$sql2 = "SELECT name FROM android_signup WhERE id ='$id'";
-$sql3 = "SELECT image FROM android_signup WhERE id ='$id'";
+$sql2 = "SELECT name FROM android_signup WHERE id ='$id'";
+$sql3 = "SELECT image FROM android_signup WHERE id ='$id'";
 
 
 $result = mysqli_query($con, $sql);
@@ -21,7 +21,7 @@ $member3 = mysqli_fetch_array($result3);
 
 
 if($member==0){
-    echo 1;
+    echo $id;
 }else{
     echo $member2['name']. "," .$member3['image'];
     exit();
