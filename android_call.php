@@ -17,14 +17,15 @@ $member = mysqli_fetch_array($result);
 $member2 = mysqli_fetch_array($result2);
 $member3 = mysqli_fetch_array($result3);
 
-// print_r($member);
 
 
-if($member==0){
-    echo $id;
+if($member == 0){
+    echo 1;
 }else{
+
     echo $member2['name']. "," .$member3['image'];
     exit();
+    
 }
 
 ?>
